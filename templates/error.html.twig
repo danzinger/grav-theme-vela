@@ -1,0 +1,16 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <header>
+        <div class="toggle-button hamburger {{ config.theme.hamburger_animation }}">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <h1>ERROR :-(</h1>
+        <hr>
+        {{ page.content }}
+    </div>
+{% endblock %}

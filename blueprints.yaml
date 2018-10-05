@@ -1,0 +1,36 @@
+name: Vela
+version: 1.0.0
+description: A simple app-like mobile first and content-focused Grav Theme
+icon: rebel
+author:
+  name: Matthias Danzinger
+  email: matthias.danzinger@gmail.com
+homepage: https://github.com/danzinger/grav-theme-vela
+demo: http://demo.matthiasdanzinger.eu/vela
+keywords: grav, theme, vela, app, mobile-first, slideoutjs
+bugs: https://github.com/danzinger/grav-theme-vela/issues
+readme: https://github.com/danzinger/grav-theme-vela/blob/master/README.md
+license: MIT
+
+form:
+  validation: loose
+
+  fields:
+    production_mode:
+      type: toggle
+      label: Production mode
+      help: When enabled, Vela-Theme will render with minified CSS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    title_in_menu:
+      type: text
+      label: Title in menu
+      help: Provide HTML String with inline styles here to easily style the title in the menu
+    hamburger_animation:
+      type: text
+      label: Specify the hamburger animation. <a href="https://jonsuh.com/hamburgers/">Reference</a>
