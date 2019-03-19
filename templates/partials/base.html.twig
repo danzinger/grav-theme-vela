@@ -16,11 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
     {% block stylesheets %}
-        {% if config.theme.production_mode %}
-            {% do assets.addCss('theme://css-compiled/main.min.css', 98) %}
-        {% else  %}
-            {% do assets.addCss('theme://css-compiled/main.css', 98) %}
-        {% endif  %}
+            {% do assets.addCss('theme://css-compiled/main.min.css', 99) %}
+        {% do assets.addCss('theme://css-compiled/custom.css', 98) %}
     {% endblock %}
     {{ assets.css() }} 
  

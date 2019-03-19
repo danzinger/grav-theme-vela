@@ -1,5 +1,5 @@
 name: Vela
-version: 1.0.0
+version: 1.0.1
 description: A simple app-like mobile first and content-focused Grav Theme
 icon: rebel
 author:
@@ -16,17 +16,6 @@ form:
   validation: loose
 
   fields:
-    production_mode:
-      type: toggle
-      label: Production mode
-      help: When enabled, Vela-Theme will render with minified CSS
-      highlight: 1
-      default: 1
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool
     title_in_menu:
       type: text
       label: Title in menu

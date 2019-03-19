@@ -1,10 +1,11 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cleancss = require('gulp-clean-css');
-var csscomb = require('gulp-csscomb');
+//var csscomb = require('gulp-csscomb');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var wait = require('gulp-wait');
 var browserSync = require('browser-sync').create();
 
 const reload = browserSync.reload;
@@ -19,28 +20,31 @@ var paths = {
 };
 
 gulp.task('sass', function() {
-  gulp.src(paths.source)
+  gulp.src(paths.source) 
+  //https://github.com/olefredrik/FoundationPress/issues/731
+  // wait is required to prevent weired error in VS-Code
+    .pipe(wait(100))
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compact', precision: 10})
+    .pipe(sass({outputStyle: 'expanded', precision: 10})
       .on('error', sass.logError)
     )
-    .pipe(sourcemaps.write())
     .pipe(autoprefixer({
       browsers: ['last 1 versions'],
       cascade: false
-      }))      
+      }))
+    // write unminified main.css
     .pipe(gulp.dest(dest_dir))
-    .pipe(csscomb())
     .pipe(cleancss())
     .pipe(rename({
       suffix: '.min'
     }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dest_dir)); 
 });
 
 gulp.task('serve', () => {
   browserSync.init({
-      proxy: "http://localhost/website/projects/for-teachers/"
+      proxy: "http://localhost/website/projects/grav-theme-rana/"
   });
   
   gulp.watch('./scss/**/*.scss', ['sass']).on('change', reload);
