@@ -65,7 +65,7 @@ The theme was developed to provide learning materials and course information to 
 ## Templates
 
 ### Table of Contents
-Beside a default template Vela comes with only one additional template to easily generate a decimal structured table of contents. I actually did not use a template for this, but for the release I included one. If you prefer, you may use any plugin to generate a full table of contents of the page. However, I usually need to provide a different TOC of my courses for my students that basically has nothing to do with the page.
+Beside a default template Vela comes with only one additional template to easily generate a decimal structured table of contents.
 
 Just write Markdown like this to generate a decimal structure.
 
@@ -95,7 +95,7 @@ which renders like:
     ...
 ```
 
-Actually you dont even need this template. To generate the TOC without the template, you may simply enable Markdown-Extra and wrap the above Markdown in a
+Note: Actually you dont even need this template. To generate the TOC without the template, you may simply enable Markdown-Extra and wrap the above Markdown in a
 ```
 <div class="toc-page" markdown="1">
 ...
@@ -105,7 +105,6 @@ Actually you dont even need this template. To generate the TOC without the templ
 For all content of my courses I use plugins like [MathJax](https://github.com/sommerregen/grav-plugin-mathjax) to write LaTeX, [YouTube](https://github.com/getgrav/grav-plugin-youtube) for adding Videos, ...
 
 ## Settings
-Only three settings are provided:
-1. Page Title shown in the Menu. To keep it very simple, you need to provide a HTML-String with inline styles here. This turned out to be the easiest solution to have a nice styling for different course names.
-1. Production Mode: Use minified css (without sourcemap)
+1. Page Title shown in the Menu. To keep it very simple, you need to provide a HTML-String with inline styles here. This turned out to be the easiest solution to have a nice styling for different names.
 1. Hamburger Animation: You may use any other animation style. See [here](https://jonsuh.com/hamburgers) for reference.
+1. Parent pages routable in menu. If you have pages with subpages (parents) and you want these parents to be routable from the menu, use this option. Be careful! The menu closes each time you click a parent. If a user wants to navigate three levels down, the menu has to be opened three times. Avoid using this option!
