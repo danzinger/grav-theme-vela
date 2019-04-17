@@ -1,5 +1,5 @@
 name: Vela
-version: 1.0.1
+version: 1.0.2
 description: A simple app-like mobile first and content-focused Grav Theme
 icon: rebel
 author:
@@ -23,3 +23,11 @@ form:
     hamburger_animation:
       type: text
       label: Specify the hamburger animation. <a href="https://jonsuh.com/hamburgers/">Reference</a>
+    parents_routable:
+        type: toggle
+        label: Parent pages routable in menu. Careful, read info!
+        help: If you have pages with subpages (parents) and you want these parents to be routable from the menu, use this option. Be careful! The menu closes each time you click a parent. If a user wants to navigate three levels down, the menu has to be opened three times. Avoid using this option!
+        default: false
+        options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED

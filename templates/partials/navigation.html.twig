@@ -5,21 +5,23 @@
 </div>
 
 <nav class="sidebar-nav">
-{% macro nav_loop(page) %}
+{% macro nav_loop(page, parents_routable) %}
     {% for p in page.children.visible %}
-        {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
+        {% set active_page = (p.active or p.activeChild) ? 'mm-active' : '' %}
+        {% set aria_expanded = (p.active or p.activeChild) ? 'aria-expanded="true"' :  'aria-expanded="false"' %}
+        {% set parent_link = parents_routable ? p.url : '#' %}
         {% if p.children.visible.count > 0 %}
-            <li>
-                <a href="{{ p.url }}" class="{{ active_page }} has-arrow">
+            <li class="{{ active_page }}">
+                <a href="{{ parent_link }}" class="{{ active_page }} has-arrow" {{aria_expanded}}>
                     {{ p.menu }}
                 </a>
-                <ul>
-                    {{ _self.nav_loop(p) }}
+                <ul class="{{(p.active or p.activeChild) ? 'mm-show' :  ''}}">
+                    {{ _self.nav_loop(p, parents_routable) }} 
                 </ul>
             </li>
-        {% else %}
+        {% else %} 
             <li>
-                <a href="{{ p.url }}" class="{{ active_page }}">
+                <a href="{{ p.url }}" class="{{ active_page }}" aria-expanded="false">
                     {{ p.menu }}
                 </a>
             </li>
@@ -27,7 +29,8 @@
     {% endfor %}
 {% endmacro %}
 
-<ul class="metismenu"  id="metismenu" {{ tree ? 'class="tree"' : '' }}>
-    {{ _self.nav_loop(pages) }}
+{% set parents_routable = config.theme.parents_routable %}
+<ul class="metismenu"  id="metismenu">
+    {{ _self.nav_loop(pages, parents_routable) }}
 </ul>
 </nav>
