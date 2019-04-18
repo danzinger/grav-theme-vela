@@ -2,17 +2,10 @@ $font-color: black;
 $link-color: #2579c7;
 $link-hover-color: darken($link-color, 15%);
 
-//These are just fallback settings. Use the theme settings to adjust these values!
-$notice-warning: "Warning" !default;
-$notice-info: "Info" !default;
-$notice-tip: "Tip" !default;
-$notice-note: "Note" !default;
-
 @import "vendor/metismenu";
 @import 'partials/mixins';
 @import "partials/sidebar";
 @import "partials/slideout";
 @import "partials/hamburgers";
-@import "partials/markdown-notices";
 @import 'partials/typography';
-@import "partials/custom";
+@import "partials/custom"; 

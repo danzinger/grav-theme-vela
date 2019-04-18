@@ -7,12 +7,13 @@
 <nav class="sidebar-nav">
 {% macro nav_loop(page, parents_routable) %}
     {% for p in page.children.visible %}
-        {% set active_page = (p.active or p.activeChild) ? 'mm-active' : '' %}
+        {% set active_page_or_child = (p.active or p.activeChild) ? 'mm-active' : '' %}
+        {% set active_page = p.active ? 'active-page' : '' %}
         {% set aria_expanded = (p.active or p.activeChild) ? 'aria-expanded="true"' :  'aria-expanded="false"' %}
         {% set parent_link = parents_routable ? p.url : '#' %}
         {% if p.children.visible.count > 0 %}
-            <li class="{{ active_page }}">
-                <a href="{{ parent_link }}" class="{{ active_page }} has-arrow" style="{{p.active ? 'font-weight: 500'}}" {{aria_expanded}}>
+            <li class="{{ active_page_or_child }}">
+                <a href="{{ parent_link }}" class="{{ active_page_or_child }} {{ active_page }} has-arrow" {{aria_expanded}}>
                     {{ p.menu }}
                 </a>
                 <ul class="{{(p.active or p.activeChild) ? 'mm-show' :  ''}}">
@@ -21,7 +22,7 @@
             </li>
         {% else %} 
             <li>
-                <a href="{{ p.url }}" class="{{ active_page }}" style="{{p.active ? 'font-weight: 500'}}"  aria-expanded="false">
+                <a href="{{ p.url }}" class="{{ active_page_or_child }} {{ active_page }} " aria-expanded="false">
                     {{ p.menu }}
                 </a>
             </li>

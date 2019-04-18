@@ -12,11 +12,15 @@
     * Minimal improvements
     * Added custom.css for simple overrides for themeusers not familiar with Gulp
 
-# v1.0.2
-##  04/17/2019
+# v1.1.0
+##  04/18/2019
 
 1. [](#improved)
     * Updated dependencies
-1. [](#new)
+    * Typography: using fluid typography & changed defaults
+    * Changed default stylings
     * Persistent menu selection of active page
+    * Documentation updates
+1. [](#new)
     * Option to navigate to routable parents from menu
+    * Optional markdown-notices styles and related admin settings (Read the Docs style)

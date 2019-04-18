@@ -1,0 +1,76 @@
+$notice-warning: "Warning" !default;
+$notice-info: "Info" !default;
+$notice-tip: "Tip" !default;
+$notice-note: "Note" !default;
+
+.notices {
+    margin: 15px 0;
+    position: relative;
+}
+
+.notices p {
+    padding: 15px;
+    margin: 0;
+    box-sizing: border-box;
+    &::before {
+        position: absolute;
+        box-sizing: border-box;
+        top: 4px;
+        color: #fff;
+        font-family: "Font Awesome 5 Free";
+        content: '\f05a';
+        font-weight: 900;
+        left: 10px;
+        font-size: 18px;
+    }
+    &::after {
+        position: absolute;
+        box-sizing: border-box;
+        top: 4px;
+        color: #fff;
+        left: 2rem;
+        content: "";
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+.notices.yellow {
+    background: rgba(239, 171, 76, 0.2);
+    p {
+        border-top: 30px solid rgba(239, 171, 76, 0.8);
+        &::after {
+            content: "Info"
+        }
+    }
+}
+
+.notices.red {
+    background: rgba(217, 83, 79, 0.2);
+    p {
+        border-top: 30px solid rgba(217, 83, 79, 0.8);
+        &::after {
+            content: $notice-warning;
+        }
+    }
+}
+
+.notices.blue {
+    background: rgba(106, 176, 222, 0.2);
+    p {
+        border-top: 30px solid rgba(106, 176, 222, 0.8);
+        &::after {
+            content: $notice-note;
+        }
+    }
+}
+
+.notices.green {
+    background: rgba(92, 184, 92, 0.2);
+    p {
+        border-top: 30px solid rgba(92, 184, 92, 0.8);
+        &::after {
+            content: $notice-tip;
+        }
+    }
+}

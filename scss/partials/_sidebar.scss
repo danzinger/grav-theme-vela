@@ -57,6 +57,10 @@ $menu-font-color: #adb5bd;
         a[aria-expanded="true"] {
             background-color: $menu-sec-color;
         }
+        .active-page{
+            font-weight: 500;
+            color: #f8f9fa;
+        }
     }
 }
 

@@ -1,13 +1,70 @@
 
 # Vela Theme
 
-The **Vela** Theme is for [Grav CMS](http://github.com/getgrav/grav). It is inspired by the amazing [Learn2](https://github.com/getgrav/grav-theme-learn2) Theme, but keeps things more simple and provides a menu using [Slideout.js](https://github.com/Mango/slideout). The menu itself uses [Metismenu](https://github.com/onokumus/metismenu). Hamburger animation is provided by [Hamburgers](https://jonsuh.com/hamburgers).
+The **Vela** Theme is for [Grav CMS](http://github.com/getgrav/grav). It is inspired by the amazing [Learn2](https://github.com/getgrav/grav-theme-learn2) Theme, but keeps things more simple and provides a touch enabled slideout navigation menu using [Slideout.js](https://github.com/Mango/slideout). The menu itself uses [Metismenu](https://github.com/onokumus/metismenu). Hamburger animation is provided by [Hamburgers](https://jonsuh.com/hamburgers).
 
 ![Vela](assets/readme-screenshot.png)
 
 ## Description
 
 A simple app-like mobile first and content-focused Grav Theme.
+
+## Features
+
+The theme was developed to provide learning materials and course information to students. It is focused on the content, so it is kept very simple. 
+
+* An applike touch enabled slideout navigation menu using [slideout.js](https://github.com/Mango/slideout)
+* A structured menu for many subpages optimized for mobile using [metismenu](https://github.com/onokumus/metismenu)
+* No distraction, only content
+
+## Settings
+
+1. **Title in Menu.** To keep it very simple, you need to provide a HTML-String with inline styles here. This turned out to be the easiest solution to have a nice styling for different names. 
+1. **Hamburger Animation:** You may use any other animation style. See [here](https://jonsuh.com/hamburgers) for reference.
+1. **Parent pages routable in menu:** If you have pages with subpages (parents) and you want these parents to be routable from the menu, use this option. Be careful! The menu closes each time you click a parent. If a user wants to navigate three levels down, the menu has to be opened three times. Avoid using this option!
+1. **Markown notice Settings:** If you use the [Markdown-notices Plugin](https://github.com/getgrav/grav-plugin-markdown-notices) you can specify here, which text appears above the respective notice.
+
+## Templates
+
+### Table of Contents
+Beside a default template Vela comes with an additional template to easily generate a decimal structured table of contents.
+
+Just write Markdown like this to generate a decimal structure.
+
+```
+1. First part
+    1. Subpart of first part
+    1. Some other section
+        1. Dive into this topic
+        1. And stay at this level
+    1. Limits and other things
+    1. Applications in Science
+1. Second part
+    1. ...
+```
+
+which renders like:
+
+```
+1. First part
+    1.1 Subpart of first part
+    1.2 Some other section
+        1.2.1 Dive into this topic
+        1.2.2 And stay at this level
+    1.3 Limits and other things
+    1.4 Applications in Science
+2. Second part
+    ...
+```
+
+Note: Actually you dont even need this template. To generate the TOC without the template, you may simply enable Markdown-Extra and wrap the above Markdown in a
+```
+<div class="toc-page" markdown="1">
+...
+</div>
+```
+
+For all content of my courses I use plugins like [MathJax](https://github.com/sommerregen/grav-plugin-mathjax) to write LaTeX, [YouTube](https://github.com/getgrav/grav-plugin-youtube) for adding Videos, ...
 
 # Installation
 
@@ -53,58 +110,3 @@ Manually updating Vela is pretty simple. Here is what you will need to do to get
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
 
 > Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
-
-## Features
-
-The theme was developed to provide learning materials and course information to students. It is focused on the content, so it is kept very simple. 
-
-* An applike touch slideout navigation menu using [(slideout.js)](https://github.com/Mango/slideout)
-* A structured menu for many subpages optimized for mobile using [(metismenu)](https://github.com/onokumus/metismenu)
-* No distraction, only content
-
-## Templates
-
-### Table of Contents
-Beside a default template Vela comes with only one additional template to easily generate a decimal structured table of contents.
-
-Just write Markdown like this to generate a decimal structure.
-
-```
-1. First part
-    1. Subpart of first part
-    1. Some other section
-        1. Dive into this topic
-        1. And stay at this level
-    1. Limits and other things
-    1. Applications in Science
-1. Second part
-    1. ...
-```
-
-which renders like:
-
-```
-1. First part
-    1.1 Subpart of first part
-    1.2 Some other section
-        1.2.1 Dive into this topic
-        1.2.2 And stay at this level
-    1.3 Limits and other things
-    1.4 Applications in Science
-2. Second part
-    ...
-```
-
-Note: Actually you dont even need this template. To generate the TOC without the template, you may simply enable Markdown-Extra and wrap the above Markdown in a
-```
-<div class="toc-page" markdown="1">
-...
-</div>
-```
-
-For all content of my courses I use plugins like [MathJax](https://github.com/sommerregen/grav-plugin-mathjax) to write LaTeX, [YouTube](https://github.com/getgrav/grav-plugin-youtube) for adding Videos, ...
-
-## Settings
-1. Page Title shown in the Menu. To keep it very simple, you need to provide a HTML-String with inline styles here. This turned out to be the easiest solution to have a nice styling for different names.
-1. Hamburger Animation: You may use any other animation style. See [here](https://jonsuh.com/hamburgers) for reference.
-1. Parent pages routable in menu. If you have pages with subpages (parents) and you want these parents to be routable from the menu, use this option. Be careful! The menu closes each time you click a parent. If a user wants to navigate three levels down, the menu has to be opened three times. Avoid using this option!

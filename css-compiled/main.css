@@ -202,6 +202,11 @@
   background-color: #455a64;
 }
 
+.sidebar-nav .metismenu .active-page {
+  font-weight: 500;
+  color: #f8f9fa;
+}
+
 .sidebar-brand {
   display: flex;
   color: #f8f9fa;
@@ -598,88 +603,6 @@
   transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.notices {
-  margin: 15px 0;
-  position: relative;
-}
-
-.notices p {
-  padding: 15px;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.notices p::before {
-  position: absolute;
-  box-sizing: border-box;
-  top: 4px;
-  color: #fff;
-  font-family: "Font Awesome 5 Free";
-  content: '\f05a';
-  font-weight: 900;
-  left: 10px;
-  font-size: 18px;
-}
-
-.notices p::after {
-  position: absolute;
-  box-sizing: border-box;
-  top: 4px;
-  color: #fff;
-  left: 2rem;
-  content: "";
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.notices.yellow {
-  background: rgba(239, 171, 76, 0.2);
-}
-
-.notices.yellow p {
-  border-top: 30px solid rgba(239, 171, 76, 0.8);
-}
-
-.notices.yellow p::after {
-  content: "Info";
-}
-
-.notices.red {
-  background: rgba(217, 83, 79, 0.2);
-}
-
-.notices.red p {
-  border-top: 30px solid rgba(217, 83, 79, 0.8);
-}
-
-.notices.red p::after {
-  content: "Warning";
-}
-
-.notices.blue {
-  background: rgba(106, 176, 222, 0.2);
-}
-
-.notices.blue p {
-  border-top: 30px solid rgba(106, 176, 222, 0.8);
-}
-
-.notices.blue p::after {
-  content: "Note";
-}
-
-.notices.green {
-  background: rgba(92, 184, 92, 0.2);
-}
-
-.notices.green p {
-  border-top: 30px solid rgba(92, 184, 92, 0.8);
-}
-
-.notices.green p::after {
-  content: "Tip";
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -1,71 +1,70 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
-<head>
-{% block head %}
-    <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    <head>
+    {% block head %}
+        <meta charset="utf-8" />
+        <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% include 'partials/metadata.html.twig' %}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% include 'partials/metadata.html.twig' %}
 
-    <link rel="canonical" href="{{ page.url(true, true) }}" />
-    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
-    <link rel="icon" type="image/png" href="{{ url('user://images/favicon.png') ?: url('theme://images/favicon.png') }}" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="canonical" href="{{ page.url(true, true) }}" />
+        <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+        <link rel="icon" type="image/png" href="{{ url('user://images/favicon.png') ?: url('theme://images/favicon.png') }}" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-
-    {% block stylesheets %}
-        {% do assets.addCss('theme://css-compiled/main.min.css', 99) %}
-        {% do assets.addCss('theme://css-compiled/custom.css', 98) %}
+        {% block stylesheets %}
+            {% do assets.addCss('theme://css-compiled/main.min.css', 99) %}
+            {% if not config.plugins['markdown-notices'].built_in_css %}{% do assets.addCss('theme://css-compiled/markdown-notices.min.css', 98) %}{% endif %} 
+            {% do assets.addCss('theme://css-compiled/custom.css', 97) %}
+        {% endblock %} 
+        {{ assets.css() }} 
+    
+        {% block javascripts %}
+            {% do assets.addJs('jquery', 100) %}
+            {% do assets.addJs('theme://js/vendor/metismenu/metismenu.min.js', {group: 'bottom'}) %}
+            {% do assets.addJs('theme://js/vendor/slideoutjs/slideout.min.js', {group: 'bottom'}) %}
+            {% do assets.addJs('theme://js/main.js', {group: 'bottom'}) %}
+        {% endblock %}
+        {{ assets.js() }}
+        {% if not config.plugins['markdown-notices'].built_in_css %}
+            <style>
+            .notices.yellow p::after {
+            content: "{{config.theme.notice.yellow}}";
+            } 
+            .notices.red p::after {
+            content: "{{config.theme.notice.red}}";
+            }
+            .notices.blue p::after {
+            content: "{{config.theme.notice.blue}}";
+            }
+            .notices.green p::after {
+            content: "{{config.theme.notice.green}}";
+            } 
+            </style>
+        {% endif %}
+    {% endblock head%}
+    </head>
+    <body>
+    {% block header %}
+        {% block header_navigation %}
+        <div class="main-nav" id="menu"> 
+            {% include 'partials/navigation.html.twig' %}
+        </div> 
+        {% endblock %}
     {% endblock %}
-    {{ assets.css() }} 
- 
-    {% block javascripts %}
-        {% do assets.addJs('jquery', 100) %}
-        {% do assets.addJs('theme://js/vendor/metismenu/metismenu.min.js', {group: 'bottom'}) %}
-        {% do assets.addJs('theme://js/vendor/slideoutjs/slideout.min.js', {group: 'bottom'}) %}
-        {% do assets.addJs('theme://js/main.js', {group: 'bottom'}) %}
+
+    {% block body %}
+        <main id="panel"> 
+            {% block content %}{% endblock %}
+        </main>
     {% endblock %}
-    {{ assets.js() }}
-    <style>
-     
-    .notices.yellow p::after {
-    content: "{{config.theme.notice.yellow}}";
-    } 
-    .notices.red p::after {
-    content: "{{config.theme.notice.red}}";
-    }
-    .notices.blue p::after {
-    content: "{{config.theme.notice.blue}}";
-    }
-    .notices.green p::after {
-    content: "{{config.theme.notice.green}}";
-    } 
- 
-    </style>
-{% endblock head%}
-</head>
-<body>
 
-{% block header %}
-    {% block header_navigation %}
-     <div class="main-nav" id="menu"> 
-        {% include 'partials/navigation.html.twig' %}
-     </div> 
+    {% block bottom %}
+        {{ assets.js('bottom') }}
     {% endblock %}
-{% endblock %}
-
-{% block body %}
-    <main id="panel"> 
-        {% block content %}{% endblock %}
-    </main>
-{% endblock %}
-
-{% block bottom %}
-    {{ assets.js('bottom') }}
-{% endblock %}
-</body>
+    </body>
 </html>
