@@ -16,11 +16,10 @@
 ##  04/18/2019
 
 1. [](#improved)
-    * Updated dependencies
     * Typography: using fluid typography & changed defaults
-    * Persistent menu selection of active page
-    * Documentation updates
+    * Persistent selection of active page in menu
+    * Improved desktop-friendliness
 1. [](#new)
     * Optional desktop mode: off-canvas menu always open 
-    * Navigate to routable parents in menu
-    * Optional custom markdown-notices styles
+    * Navigate to routable parents in menu (optional)
+    * Custom markdown-notices styles (optional)
