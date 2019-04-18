@@ -1,0 +1,31 @@
+<style>
+    {% if not config.plugins['markdown-notices'].built_in_css %}
+        .notices.yellow p::after {
+        content: "{{config.theme.notice.yellow}}";
+        } 
+        .notices.red p::after {
+        content: "{{config.theme.notice.red}}";
+        }
+        .notices.blue p::after {
+        content: "{{config.theme.notice.blue}}";
+        }
+        .notices.green p::after {
+        content: "{{config.theme.notice.green}}";
+        } 
+    {% endif %}
+    {% if config.theme.desktop_mode %}
+        @media screen and (min-width: {{config.theme.desktop_min_width}}px) {
+            .slideout-panel {
+            margin-left: 320px;
+            }
+
+            .slideout-menu {
+            display: block;
+            }
+
+            .toggle-button {
+            visibility: hidden;
+            }
+        }
+    {% endif %}
+</style>

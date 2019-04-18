@@ -1,7 +1,6 @@
-
 # Vela Theme
 
-The **Vela** Theme is for [Grav CMS](http://github.com/getgrav/grav). It is inspired by the amazing [Learn2](https://github.com/getgrav/grav-theme-learn2) Theme, but keeps things more simple and provides a touch enabled slideout navigation menu using [Slideout.js](https://github.com/Mango/slideout). The menu itself uses [Metismenu](https://github.com/onokumus/metismenu). Hamburger animation is provided by [Hamburgers](https://jonsuh.com/hamburgers).
+The **Vela** Theme is for [Grav CMS](http://github.com/getgrav/grav). It is inspired by the amazing [Learn2](https://github.com/getgrav/grav-theme-learn2) Theme, but keeps things more simple and provides a touch enabled slideout navigation menu using [Slideout.js](https://github.com/Mango/slideout). The menu itself uses [Metismenu](https://github.com/onokumus/metismenu). Hamburger animation is provided by [Hamburgers](https://jonsuh.com/hamburgers). The theme is mobile-first, but offers settings to provide a good experience on desktops too.
 
 ![Vela](assets/readme-screenshot.png)
 
@@ -19,10 +18,21 @@ The theme was developed to provide learning materials and course information to 
 
 ## Settings
 
-1. **Title in Menu.** To keep it very simple, you need to provide a HTML-String with inline styles here. This turned out to be the easiest solution to have a nice styling for different names. 
-1. **Hamburger Animation:** You may use any other animation style. See [here](https://jonsuh.com/hamburgers) for reference.
-1. **Parent pages routable in menu:** If you have pages with subpages (parents) and you want these parents to be routable from the menu, use this option. Be careful! The menu closes each time you click a parent. If a user wants to navigate three levels down, the menu has to be opened three times. Avoid using this option!
-1. **Markown notice Settings:** If you use the [Markdown-notices Plugin](https://github.com/getgrav/grav-plugin-markdown-notices) you can specify here, which text appears above the respective notice.
+The theme provides several options. If you are using the admin panel, you can easily modify these settings under Themes > Vela. If you are not using admin, you probably know where to modify these settings directly.
+
+##### Basic Settings
+
+* **Title in Menu.** To keep it very simple, you can provide a HTML-string with inline styles here. This turned out to be the easiest solution to have a nice styling for different names. If you do not worry about styling, just enter a short title. 
+* **Hamburger animation.** You may use any other animation style. See [here](https://jonsuh.com/hamburgers) for reference.
+
+##### Markdown Notices Settings
+
+* **Markdown notice Settings.** If you use the [Markdown-notices plugin](https://github.com/getgrav/grav-plugin-markdown-notices) **without** the build-in-css (disable built-in-css in plugin options), the Vela theme will automatically use its own styles for the notices. These include a small text. You can specify here, which text appears above the respective notice.
+
+##### Responsive settings
+* **Desktop Mode.** If enabled, the off-canvas-menu is always open if screen is wider than the `Desktop min width` value, which can be set below. 
+* **Desktop min width (pixels).** Applies only in desktop mode. If the screen width is wider than the given amount of pixels, the off-canvas menu is always open.
+* **Parent pages routable in menu.** If you have pages with subpages (parents) and you want these parents to be routable from the menu, use this option. **Please note: ** If you do not use desktop-mode or - when in desktop mode - the screen-width is smaller then the amount set above, the menu closes each time you click a parent.
 
 ## Templates
 
@@ -97,7 +107,7 @@ As development for the Vela theme continues, new versions may become available t
 
 The simplest way to update this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm). You can do this with this by navigating to the root directory of your Grav install using your system's Terminal (also called command line) and typing the following:
 
-    bin/gpm update Vela
+    bin/gpm update vela
 
 This command will check your Grav install to see if your Vela theme is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The theme will automatically update and clear Grav's cache.
 

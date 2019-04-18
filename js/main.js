@@ -37,7 +37,7 @@ $('.toggle-button').on('click', function() {
     slideout.toggle();
 });
 
-// Uncomment to have the menu opend on page load. For developing...
-// $( document ).ready(function() {
+//Uncomment to have the menu opend on page load. For developing...
+// $( document ).ready(function() {  
 //    slideout.toggle();
 // }); 

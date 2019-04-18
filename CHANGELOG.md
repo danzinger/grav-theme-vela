@@ -18,9 +18,9 @@
 1. [](#improved)
     * Updated dependencies
     * Typography: using fluid typography & changed defaults
-    * Changed default stylings
     * Persistent menu selection of active page
     * Documentation updates
 1. [](#new)
-    * Option to navigate to routable parents from menu
-    * Optional markdown-notices styles and related admin settings (Read the Docs style)
+    * Optional desktop mode: off-canvas menu always open 
+    * Navigate to routable parents in menu
+    * Optional custom markdown-notices styles

@@ -10,7 +10,7 @@
         {% set active_page_or_child = (p.active or p.activeChild) ? 'mm-active' : '' %}
         {% set active_page = p.active ? 'active-page' : '' %}
         {% set aria_expanded = (p.active or p.activeChild) ? 'aria-expanded="true"' :  'aria-expanded="false"' %}
-        {% set parent_link = parents_routable ? p.url : '#' %}
+        {% set parent_link = (parents_routable and p.routable) ? p.url : '#' %}
         {% if p.children.visible.count > 0 %}
             <li class="{{ active_page_or_child }}">
                 <a href="{{ parent_link }}" class="{{ active_page_or_child }} {{ active_page }} has-arrow" {{aria_expanded}}>
@@ -23,7 +23,7 @@
         {% else %} 
             <li>
                 <a href="{{ p.url }}" class="{{ active_page_or_child }} {{ active_page }} " aria-expanded="false">
-                    {{ p.menu }}
+                    {{ p.menu }} 
                 </a>
             </li>
         {% endif %}
