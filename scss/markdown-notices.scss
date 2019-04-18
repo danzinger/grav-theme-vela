@@ -16,12 +16,11 @@ $notice-note: "Note" !default;
         position: absolute;
         box-sizing: border-box;
         top: 5.5px;
-        color: black;
         content: url(../assets/info-circle-solid.svg);
         width: 18px!important;
         height: 18px!important;
         left: 10px;
-        font-size: 18px;
+        font-size: 19px;
     }
     &::after {
         position: absolute;
@@ -34,6 +33,8 @@ $notice-note: "Note" !default;
         font-weight: 500;
     }
 }
+
+// The contents are set dynamically via settings.css.html.twig. These "content" values here are just default values with basically no effect. Adjust these values via vela.yaml or via theme configuration in backend.
 
 .notices.yellow {
     background: rgba(239, 171, 76, 0.2);

@@ -19,7 +19,6 @@
             {% do assets.addCss('theme://css-compiled/main.min.css', 99) %}
             {% if not config.plugins['markdown-notices'].built_in_css %}{% do assets.addCss('theme://css-compiled/markdown-notices.min.css', 98) %}{% endif %} 
             {% do assets.addCss('theme://css-compiled/custom.css', 97) %}
-            {% do assets.addCss('theme://css-compiled/settings.css', 96) %}
         {% endblock %} 
         {{ assets.css() }} 
         {% block javascripts %} 

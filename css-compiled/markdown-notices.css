@@ -13,12 +13,11 @@
   position: absolute;
   box-sizing: border-box;
   top: 5.5px;
-  color: black;
   content: url(../assets/info-circle-solid.svg);
   width: 18px !important;
   height: 18px !important;
   left: 10px;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .notices p::after {
