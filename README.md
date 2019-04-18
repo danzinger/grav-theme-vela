@@ -28,8 +28,6 @@ The theme was developed to provide learning materials and course information to 
 
 ### Table of Contents
 
-**Note: ** Markdown-processing has to be enabled in system configuration to use this template
-
 Beside a default template Vela comes with an additional template to easily generate a decimal structured table of contents.
 
 Just write Markdown like this to generate a decimal structure.

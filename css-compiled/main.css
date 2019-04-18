@@ -767,6 +767,10 @@ code {
   }
 }
 
+p {
+  font-weight: 300;
+}
+
 strong {
   font-weight: 500;
 }
@@ -809,11 +813,12 @@ body {
   display: flex;
 }
 
-hr {
+.header-hr {
   border: 0;
   height: 0;
   /* Firefox... */
   box-shadow: 0 0 5px 1px #2579c7;
+  margin-bottom: 30px;
 }
 
 code {
@@ -837,7 +842,7 @@ code {
 
 .toc-page ol {
   counter-reset: item;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 800px) {

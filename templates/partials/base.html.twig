@@ -13,8 +13,7 @@
         <link rel="canonical" href="{{ page.url(true, true) }}" />
         <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
         <link rel="icon" type="image/png" href="{{ url('user://images/favicon.png') ?: url('theme://images/favicon.png') }}" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
         {% block stylesheets %}
             {% do assets.addCss('theme://css-compiled/main.min.css', 99) %}
@@ -23,7 +22,7 @@
         {% endblock %} 
         {{ assets.css() }} 
     
-        {% block javascripts %}
+        {% block javascripts %} 
             {% do assets.addJs('jquery', 100) %}
             {% do assets.addJs('theme://js/vendor/metismenu/metismenu.min.js', {group: 'bottom'}) %}
             {% do assets.addJs('theme://js/vendor/slideoutjs/slideout.min.js', {group: 'bottom'}) %}

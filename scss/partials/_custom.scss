@@ -10,11 +10,12 @@ body {
     display: flex;
 }
 
-hr {
+.header-hr {
     border: 0;
     height: 0;
     /* Firefox... */
     box-shadow: 0 0 5px 1px #2579c7;
+    margin-bottom: 30px;
 }
 
 code {
@@ -41,7 +42,7 @@ code {
             padding-left: 15px;
         }
         counter-reset: item;
-        font-weight: 600;
+        font-weight: 500;
         ol {
             font-weight: 300;
             ol {

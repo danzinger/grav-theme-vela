@@ -57,6 +57,10 @@ code {
     @include fluid-type($min_width, $max_width, 16px, 25px);
 }
 
+p{
+  font-weight: 300;
+}
+
 strong{
     font-weight: 500;
 }
