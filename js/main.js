@@ -1,4 +1,3 @@
-
 //initialize metismenu
 $("#metismenu").metisMenu();
 
@@ -16,7 +15,7 @@ function close(eve) {
     slideout.close();
 }
 
-//make the hamburger animation correct when using touch events
+//make the hamburger animation correct when using touch events and add classes based on context
 slideout
     .on('beforeopen', function() { 
         this.panel.classList.add('panel-open');

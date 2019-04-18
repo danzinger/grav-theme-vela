@@ -2,7 +2,6 @@ enabled: true
 title_in_menu: "<div style='font-size: 25px'>advanced<br>calculus</div><span style='font-size: 50px;padding-top:7px;'>2</span>"
 hamburger_animation: hamburger--spin
 parents_routable: false
-# MARKDOWN-NOTICES-TEXT
 notice:
     yellow: "Info"
     red: "Warning"
