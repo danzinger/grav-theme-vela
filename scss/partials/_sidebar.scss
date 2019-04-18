@@ -8,9 +8,6 @@ $menu-font-color: #adb5bd;
     ul {
         @include fluid-type(320px, 1200px, 16px, 18px);
     }
-    .sidebar-brand-link{
-        color: red;
-    }
     ul {
         padding: 0;
         margin: 0;

@@ -2,8 +2,12 @@ $min_width: 320px;
 $max_width: 1200px;
 $min_font: 16px;
 $max_font: 50px;
-
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 500;
 }
 
@@ -17,7 +21,7 @@ h1 {
 .default-header {
     line-height: 0.8;
     padding: 0px 25px 10px 0px;
-    border-bottom: 5px solid $font-color; 
+    border-bottom: 5px solid $font-color;
 }
 
 h2 {
@@ -57,11 +61,11 @@ code {
     @include fluid-type($min_width, $max_width, 16px, 25px);
 }
 
-p{
-  font-weight: 300;
+p {
+    font-weight: 300;
 }
 
-strong{
+strong {
     font-weight: 500;
 }
 
@@ -73,4 +77,8 @@ a {
     &:hover {
         color: $link-hover-color;
     }
+}
+
+code {
+    white-space: pre-line;
 }

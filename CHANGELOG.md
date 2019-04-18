@@ -23,3 +23,9 @@
     * Optional desktop mode: off-canvas menu always open 
     * Navigate to routable parents in menu (optional)
     * Custom markdown-notices styles (optional)
+    
+# v1.1.1
+##  04/18/2019
+
+1. [](#bug)
+    * Fixed bug with content width in default template

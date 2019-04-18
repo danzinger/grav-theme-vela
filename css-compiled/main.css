@@ -149,10 +149,6 @@
   }
 }
 
-.sidebar-nav .sidebar-brand-link {
-  color: red;
-}
-
 .sidebar-nav ul {
   padding: 0;
   margin: 0;
@@ -605,7 +601,12 @@
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 500;
 }
 
@@ -801,6 +802,10 @@ a:hover {
   color: #195286;
 }
 
+code {
+  white-space: pre-line;
+}
+
 html,
 body {
   font-family: 'Roboto', sans-serif;
@@ -821,10 +826,6 @@ body {
   margin-bottom: 30px;
 }
 
-code {
-  white-space: pre-line;
-}
-
 .page-title {
   margin-bottom: 0px;
 }
@@ -836,24 +837,8 @@ code {
   margin-bottom: 50px;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.content * {
+  max-width: 100%;
 }
 
 .toc-page > ol {
@@ -886,4 +871,24 @@ code {
 .toc-page li:before {
   content: counters(item, ".") " ";
   counter-increment: item;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6f6e6e;
 }
