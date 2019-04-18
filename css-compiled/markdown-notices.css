@@ -12,11 +12,11 @@
 .notices p::before {
   position: absolute;
   box-sizing: border-box;
-  top: 4px;
-  color: #fff;
-  font-family: "Font Awesome 5 Free";
-  content: '\f05a';
-  font-weight: 900;
+  top: 5.5px;
+  color: black;
+  content: url(../assets/info-circle-solid.svg);
+  width: 18px !important;
+  height: 18px !important;
   left: 10px;
   font-size: 18px;
 }

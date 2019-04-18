@@ -38,7 +38,7 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
     sec2:
       type: section
-      title: Mardown Notices Settings
+      title: Markdown Notices Settings
       text:  "<strong>Note: </strong> Settings are only applied if built-in css of markdown notices plugin is not used"
       underline: true
       fields:          
