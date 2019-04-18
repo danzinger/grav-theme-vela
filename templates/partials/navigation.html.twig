@@ -1,7 +1,7 @@
 <div class="flex-container">
-    <span class="sidebar-brand">
-            {{ config.theme.title_in_menu }}
-    </span> 
+    <a href="{{ base_url == '' ? '/' : base_url }}" class="sidebar-brand">
+         {{ config.theme.title_in_menu }}
+    </a> 
 </div>
 
 <nav class="sidebar-nav">
@@ -12,7 +12,7 @@
         {% set parent_link = parents_routable ? p.url : '#' %}
         {% if p.children.visible.count > 0 %}
             <li class="{{ active_page }}">
-                <a href="{{ parent_link }}" class="{{ active_page }} has-arrow" {{aria_expanded}}>
+                <a href="{{ parent_link }}" class="{{ active_page }} has-arrow" style="{{p.active ? 'font-weight: 500'}}" {{aria_expanded}}>
                     {{ p.menu }}
                 </a>
                 <ul class="{{(p.active or p.activeChild) ? 'mm-show' :  ''}}">
@@ -21,7 +21,7 @@
             </li>
         {% else %} 
             <li>
-                <a href="{{ p.url }}" class="{{ active_page }}" aria-expanded="false">
+                <a href="{{ p.url }}" class="{{ active_page }}" style="{{p.active ? 'font-weight: 500'}}"  aria-expanded="false">
                     {{ p.menu }}
                 </a>
             </li>

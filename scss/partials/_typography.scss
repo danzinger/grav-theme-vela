@@ -1,0 +1,72 @@
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 50px;
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+}
+
+h1 {
+    @include fluid-type($min_width, $max_width, 35px, 60px);
+    margin: 35px 0px 10px 0px;
+    position: relative;
+    font-weight: 500;
+}
+
+.default-header {
+    line-height: 0.8;
+    padding: 0px 25px 10px 0px;
+    border-bottom: 5px solid $font-color;
+}
+
+h2 {
+    @include fluid-type($min_width, $max_width, 20px, 45px);
+    margin: 30px 0px 10px 0px;
+    position: relative;
+}
+
+h3 {
+    @include fluid-type($min_width, $max_width, 19px, 40px);
+    margin: 25px 0px 10px 0px;
+    position: relative;
+}
+
+h4 {
+    @include fluid-type($min_width, $max_width, 18px, 35px);
+    margin: 20px 0px 10px 0px;
+    position: relative;
+}
+
+h5 {
+    @include fluid-type($min_width, $max_width, 17px, 30px);
+    margin: 15px 0px 10px 0px;
+    position: relative;
+}
+
+h6 {
+    @include fluid-type($min_width, $max_width, 16px, 25px);
+    margin: 10px 0px 8px 0px;
+    position: relative;
+}
+
+p,
+li,
+ul,
+code {
+    @include fluid-type($min_width, $max_width, 16px, 25px);
+}
+
+strong{
+    font-weight: 500;
+}
+
+a {
+    @include fluid-type($min_width, $max_width, 16px, 25px);
+    text-decoration: none;
+    color: $link-color;
+    transition: all 0.1s ease-in;
+    &:hover {
+        color: $link-hover-color;
+    }
+}

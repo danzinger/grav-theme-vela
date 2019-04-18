@@ -1,12 +1,21 @@
 $menu-bg-color:#1f1f1f;
-$menu-sec-color:unquote('#2579c7c2'); 
+$menu-sec-color: #455a64;
+$menu-font-color: #adb5bd;
 .sidebar-nav {
     background: $menu-bg-color;
+    a,
+    li,
+    ul {
+        @include fluid-type(320px, 1200px, 16px, 18px);
+    }
+    .sidebar-brand-link{
+        color: red;
+    }
     ul {
         padding: 0;
         margin: 0;
         list-style: none;
-        background-color: $menu-bg-color; 
+        background-color: $menu-bg-color;
     }
     .metismenu {
         display: flex;
@@ -25,18 +34,18 @@ $menu-sec-color:unquote('#2579c7c2');
         a {
             position: relative;
             display: block;
-            padding: 13px 15px;
-            color: #adb5bd; 
+            padding: 15px 15px;
+            color: $menu-font-color;
             outline-width: 0;
-            transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out; 
         }
         ul>li {
             padding-left: 1px;
             border-left: 3px solid $menu-sec-color;
             background: rgba(255, 255, 255, .05);
         }
-        ul ul{
-           background: rgba(255, 255, 255, .02);
+        ul ul {
+            background: rgba(255, 255, 255, .02);
         }
         a:hover,
         .metismenu a:focus,
@@ -53,14 +62,14 @@ $menu-sec-color:unquote('#2579c7c2');
 
 .sidebar-brand {
     display: flex;
-    color: white;
+    color: #f8f9fa;
     height: 65px;
     line-height: 20px;
     justify-content: center;
     align-content: center;
     align-items: center;
     width: 100%;
-    h3 {
-        font-weight: 400;
+    &:hover{
+      color: $menu-font-color;
     }
 }

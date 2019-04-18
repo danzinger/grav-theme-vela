@@ -23,6 +23,18 @@ form:
     hamburger_animation:
       type: text
       label: Specify the hamburger animation. <a href="https://jonsuh.com/hamburgers/">Reference</a>
+    notice.yellow:
+        type: text
+        label: Yellow markown notice text
+    notice.red:
+        type: text
+        label: Red markown notice text
+    notice.blue:
+        type: text
+        label: Blue markown notice text
+    notice.green:
+        type: text
+        label: Green markown notice text
     parents_routable:
         type: toggle
         label: Parent pages routable in menu. Careful, read info!
