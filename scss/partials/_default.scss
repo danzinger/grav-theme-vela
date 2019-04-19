@@ -27,8 +27,8 @@ body {
     padding: 0 1em;
     max-width: 1170px;
     margin-bottom: 50px;
-    * {
-        max-width: 100%;
+    img, div{ 
+        max-width: 100%; 
     }
 }
 

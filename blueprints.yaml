@@ -1,5 +1,5 @@
 name: Vela
-version: 1.1.1
+version: 1.1.2
 description: A simple app-like mobile first and content-focused Grav Theme
 icon: rebel
 author:
@@ -26,7 +26,7 @@ form:
           help:  If you do not worry about styling, just enter a short title. But you can also provide a HTML string with inline styles here to easily style the title in the menu.
         hamburger_animation:
           type: text
-          label: Specify the hamburger animation. <a href="https://jonsuh.com/hamburgers/">Reference</a>
+          label: Specify the hamburger animation. <a href="https://jonsuh.com/hamburgers/">Reference</a> 
     sec2:
       type: section
       title: Markdown Notices Settings
@@ -67,7 +67,7 @@ form:
             default: 1200
         parents_routable:
             type: toggle
-            label: Parent pages routable in menu. Careful, read info!
+            label: Parent pages routable in menu. Careful, read documentation!
             help: If you have (routable) pages with subpages (parents) and you want these parents to be routable from the menu, use this option. Be careful! The menu closes each time you click a parent if you do not use dektop mode, which makes browsing your website hard since the menu closes each time you click a routable parent.
             highlight: 1
             default: 0

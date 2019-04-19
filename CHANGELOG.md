@@ -27,5 +27,11 @@
 # v1.1.1
 ##  04/18/2019
 
-1. [](#bug)
+1. [](#bugfix)
     * Fixed bug with content width in default template
+
+# v1.1.2
+##  04/19/2019
+
+1. [](#bugfix)
+    * Fixed compatibility issue with mathjax plugin

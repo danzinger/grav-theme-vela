@@ -183,12 +183,10 @@
 }
 
 .sidebar-nav .metismenu ul ul {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.03);
 }
 
-.sidebar-nav .metismenu a:hover,
-.sidebar-nav .metismenu .metismenu a:focus,
-.sidebar-nav .metismenu a:active {
+.sidebar-nav .metismenu a:hover, .sidebar-nav .metismenu a:focus, .sidebar-nav .metismenu a:active {
   color: #f8f9fa;
   text-decoration: none;
   background: #455a64;
@@ -837,7 +835,7 @@ body {
   margin-bottom: 50px;
 }
 
-.content * {
+.content img, .content div {
   max-width: 100%;
 }
 

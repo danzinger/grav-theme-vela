@@ -1,6 +1,7 @@
 $menu-bg-color:#1f1f1f;
 $menu-sec-color: #455a64;
 $menu-font-color: #adb5bd;
+$hover-active-font-color: #f8f9fa;
 .sidebar-nav {
     background: $menu-bg-color;
     a,
@@ -34,43 +35,41 @@ $menu-font-color: #adb5bd;
             padding: 15px 15px;
             color: $menu-font-color;
             outline-width: 0;
-            transition: all .2s ease-in-out; 
+            transition: all .2s ease-in-out;
         }
         ul>li {
             padding-left: 1px;
-            border-left: 3px solid $menu-sec-color; 
+            border-left: 3px solid $menu-sec-color;
             background: rgba(255, 255, 255, .05);
         }
         ul ul {
-            background: rgba(255, 255, 255, .02);
+            background: rgba(255, 255, 255, .03);
         }
-        a:hover,
-        .metismenu a:focus,
-        a:active {
-            color: #f8f9fa;
+        a:hover,a:focus,a:active {
+            color: $hover-active-font-color;
             text-decoration: none;
             background: $menu-sec-color;
         }
         a[aria-expanded="true"] {
             background-color: $menu-sec-color;
         }
-        .active-page{
+        .active-page {
             font-weight: 500;
-            color: #f8f9fa;
+            color: $hover-active-font-color;
         }
     }
 }
 
 .sidebar-brand {
     display: flex;
-    color: #f8f9fa;
+    color: $hover-active-font-color;
     height: 65px;
     line-height: 20px;
     justify-content: center;
     align-content: center;
     align-items: center;
     width: 100%;
-    &:hover{
-      color: $menu-font-color;
+    &:hover {
+        color: $menu-font-color;
     }
 }
