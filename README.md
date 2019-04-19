@@ -32,7 +32,7 @@ The theme provides several options. If you are using the admin panel, you can ea
 ##### Responsive settings
 * **Desktop Mode.** If enabled, the off-canvas-menu is always open if screen is wider than the `Desktop min width` value, which can be set below. 
 * **Desktop min width (pixels).** Applies only in desktop mode. If the screen width is wider than the given amount of pixels, the off-canvas menu is always open.
-* **Parent pages routable in menu.** If you have pages with subpages and you want these parent-parents to be routable from the menu because you like to place content there, you can use this. The page will only be opened, if it existis and if you do not set `routable: false` in the frontmatter of the page. Otherwise, the subpages are only expanded in the menu. **Please note: ** If you do not use desktop-mode or - when in desktop mode - the screen-width is smaller then the amount set above, the menu closes each time you click a parent.
+* **Parent pages routable in menu.** If you have pages with subpages and you want these parent-pages to be accessible from the menu because you like to place content there, you can use this option. The page will only be opened, if it existis and if you do not set `routable: false` in the frontmatter of the page. Otherwise, the subpages are only expanded in the menu. **Please note: ** If you do not use Desktop Mode or - when in Desktop Mode - the screen-width is smaller then the amount set above, the menu closes each time you click a routable parent.
 
 ## Templates
 
