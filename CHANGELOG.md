@@ -35,3 +35,12 @@
 
 1. [](#bugfix)
     * Fixed compatibility issue with mathjax plugin
+
+# v1.1.3
+##  04/19/2019
+
+1. [](#new)
+    * Reincluded pure.css and normalize.css
+1. [](#bugfix)
+    * Fixed cross browser issues
+    * minor bugfixes

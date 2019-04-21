@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    word-break: break-word;
 }
 
 .flex-container {
@@ -18,7 +19,7 @@ body {
     margin-bottom: 30px;
 }
 
-.page-title {
+.page-title { 
     margin-bottom: 0px;
 }
 
@@ -30,6 +31,7 @@ body {
     img, div{ 
         max-width: 100%; 
     }
+    word-wrap: break-word;
 }
 
 // Table of contents

@@ -57,11 +57,13 @@ h6 {
 p,
 li,
 ul,
-code {
+code { 
     @include fluid-type($min_width, $max_width, 16px, 25px);
 }
 
-p {
+p,
+li,
+ul {
     font-weight: 300;
 }
 
@@ -80,5 +82,5 @@ a {
 }
 
 code {
-    white-space: pre-line;
+//    white-space: pre-line;
 }
