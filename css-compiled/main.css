@@ -1035,49 +1035,48 @@ legend {
   position: relative;
   display: block;
   padding: 15px 15px;
-  color: #adb5bd;
+  color: #cad4df;
   outline-width: 0;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-out;
 }
 
 .sidebar-nav .metismenu ul > li {
-  padding-left: 1px;
-  border-left: 3px solid #455a64;
-  background: rgba(255, 255, 255, 0.05);
+  padding-left: 2px;
+  border-left: 4px solid #455a6456;
+  background: rgba(185, 185, 185, 0.05);
 }
 
 .sidebar-nav .metismenu ul ul {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(219, 219, 219, 0);
 }
 
 .sidebar-nav .metismenu a:hover, .sidebar-nav .metismenu a:focus, .sidebar-nav .metismenu a:active {
-  color: #f8f9fa;
+  color: #e2e2e2;
   text-decoration: none;
-  background: #455a64;
+  background: #455a6456;
 }
 
 .sidebar-nav .metismenu a[aria-expanded="true"] {
-  background-color: #455a64;
+  background-color: #455a6456;
 }
 
 .sidebar-nav .metismenu .active-page {
-  font-weight: 500;
-  color: #f8f9fa;
+  font-weight: 400;
+  color: #e2e2e2;
 }
 
 .sidebar-brand {
   display: flex;
-  color: #f8f9fa;
+  color: #e2e2e2;
   height: 65px;
   line-height: 20px;
   justify-content: center;
-  align-content: center;
   align-items: center;
   width: 100%;
 }
 
 .sidebar-brand:hover {
-  color: #adb5bd;
+  color: #c9c8c8;
 }
 
 .slideout-menu {
@@ -1413,13 +1412,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h1 {
   margin: 35px 0px 10px 0px;
   position: relative;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h1 {
@@ -1428,13 +1427,13 @@ h1 {
 
 @media screen and (min-width: 320px) {
   h1 {
-    font-size: calc(35px + 25 * ((100vw - 320px) / 880));
+    font-size: calc(35px + 5 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h1 {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 
@@ -1455,13 +1454,13 @@ h2 {
 
 @media screen and (min-width: 320px) {
   h2 {
-    font-size: calc(20px + 25 * ((100vw - 320px) / 880));
+    font-size: calc(20px + 12 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h2 {
-    font-size: 45px;
+    font-size: 32px;
   }
 }
 
@@ -1476,13 +1475,13 @@ h3 {
 
 @media screen and (min-width: 320px) {
   h3 {
-    font-size: calc(19px + 21 * ((100vw - 320px) / 880));
+    font-size: calc(19px + 9 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h3 {
-    font-size: 40px;
+    font-size: 28px;
   }
 }
 
@@ -1497,13 +1496,13 @@ h4 {
 
 @media screen and (min-width: 320px) {
   h4 {
-    font-size: calc(18px + 17 * ((100vw - 320px) / 880));
+    font-size: calc(18px + 6 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h4 {
-    font-size: 35px;
+    font-size: 24px;
   }
 }
 
@@ -1518,13 +1517,13 @@ h5 {
 
 @media screen and (min-width: 320px) {
   h5 {
-    font-size: calc(17px + 13 * ((100vw - 320px) / 880));
+    font-size: calc(17px + 3 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h5 {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 
@@ -1539,13 +1538,13 @@ h6 {
 
 @media screen and (min-width: 320px) {
   h6 {
-    font-size: calc(16px + 9 * ((100vw - 320px) / 880));
+    font-size: calc(16px + 0 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h6 {
-    font-size: 25px;
+    font-size: 16px;
   }
 }
 
@@ -1625,21 +1624,40 @@ body {
 
 .header-hr {
   border: 0;
-  height: 0;
-  /* Firefox... */
-  box-shadow: 0 0 5px 1px #2579c7;
-  margin-bottom: 30px;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 .page-title {
   margin-bottom: 0px;
 }
 
+.page-title {
+  font-size: 45px;
+}
+
+@media screen and (min-width: 320px) {
+  .page-title {
+    font-size: calc(45px + 35 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-title {
+    font-size: 80px;
+  }
+}
+
+.slideout-panel {
+  height: 100%;
+  background-color: whitesmoke;
+}
+
 .content {
   margin: 0 auto;
   padding: 0 1em;
   max-width: 1170px;
-  margin-bottom: 50px;
   word-wrap: break-word;
 }
 

@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+
 var cleancss = require('gulp-clean-css');
 //var csscomb = require('gulp-csscomb');
 var rename = require('gulp-rename');
@@ -20,16 +22,16 @@ var paths = {
 };
 
 gulp.task('sass', function() {
-  gulp.src(paths.source) 
+  return gulp.src(paths.source) 
   //https://github.com/olefredrik/FoundationPress/issues/731
   // wait is required to prevent weired error in VS-Code
-    .pipe(wait(100))
+    //.pipe(wait(1000))
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expanded', precision: 10})
-      .on('error', sass.logError)
+      .on('error', sass.logError) 
     )
     .pipe(autoprefixer({
-      browsers: ['last 1 versions'],
+      //browsers: ['last 1 versions'],
       cascade: false
       }))
     // write unminified main.css
@@ -39,19 +41,21 @@ gulp.task('sass', function() {
       suffix: '.min'
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(dest_dir)); 
+    .pipe(gulp.dest(dest_dir))  
+    .pipe(browserSync.reload({ stream:true }));
 });
 
 gulp.task('serve', () => {
   browserSync.init({
-      proxy: "http://localhost/website/projects/grav-theme-rana/"
+      proxy: "http://localhost/website/projects/grav-admin/"
   });
   
-  gulp.watch('./scss/**/*.scss', ['sass']).on('change', reload);
-  gulp.watch('./blueprints/*.yaml').on('change', reload);
-  gulp.watch('./templates/**/*.twig').on('change', reload);  
-  gulp.watch('../../pages/**/*.md').on('change', reload);
-  gulp.watch('../../config/**/*.yaml').on('change', reload);
+   gulp.watch('./scss/**/*.scss', gulp.series('sass'));//.on('change', reload);
+   gulp.watch('./blueprints/*.yaml').on('change', reload);
+   gulp.watch('./js/**/*.js').on('change', reload);
+   gulp.watch('./templates/**/*.twig').on('change', reload);  
+   gulp.watch('../../pages/**/*.md').on('change', reload);
+   gulp.watch('../../config/**/*.yaml').on('change', reload); 
 });
 
-gulp.task('default', ['serve','sass']);
+gulp.task('default', gulp.parallel('serve','sass'));

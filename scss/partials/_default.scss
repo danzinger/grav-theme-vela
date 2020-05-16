@@ -8,29 +8,33 @@ body {
 }
 
 .flex-container {
-    display: flex;
-}
+    display: flex;        
+}  
 
 .header-hr {
     border: 0;
-    height: 0;
-    /* Firefox... */
-    box-shadow: 0 0 5px 1px #2579c7;
-    margin-bottom: 30px;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);  
 }
 
 .page-title { 
     margin-bottom: 0px;
+    @include fluid-type($min_width, $max_width, 45px, 80px); 
+}
+
+.slideout-panel{
+    height: 100%;
+    background-color: rgb(245, 245, 245);
 }
 
 .content {
     margin: 0 auto;
     padding: 0 1em;
     max-width: 1170px;
-    margin-bottom: 50px;
     img, div{ 
         max-width: 100%; 
-    }
+    } 
     word-wrap: break-word;
 }
 
