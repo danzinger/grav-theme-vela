@@ -1,5 +1,5 @@
 name: Vela
-version: 1.1.3
+version: 1.1.4
 description: A simple app-like mobile first and content-focused Grav Theme
 icon: rebel
 author:
@@ -24,6 +24,14 @@ form:
           type: text
           label: Title in menu
           help:  If you do not worry about styling, just enter a short title. But you can also provide a HTML string with inline styles here to easily style the title in the menu.
+        logo:
+          type: text
+          label: Logo filename (place logo in user/themes/vela/assets/)
+          help: Place the image in user/themes/vela/assets/ and specify the filename here, eg. ''my-logo.svg''
+        logo_size:
+          type: number
+          label: Logo size in pixels
+          help:  Set the Logo size in pixels
         hamburger_animation:
           type: text
           label: Specify the hamburger animation. <a href="https://jonsuh.com/hamburgers/">Reference</a> 

@@ -1,11 +1,13 @@
 enabled: true
-title_in_menu: "<div style='font-size: 25px'>advanced<br>calculus</div><span style='font-size: 50px;padding-top:7px;'>2</span>"
+title_in_menu: '<div style=''font-size: 30px''>Vela<sub style=''font-size: 15px;padding-top:7px;''>v1.1.4</sub></div><span ></span>'
+logo: grav-brands.svg
+logo_size: 53
 hamburger_animation: hamburger--spin
-parents_routable: false
-desktop_mode: false
+parents_routable: '0'
+desktop_mode: '1'
 desktop_min_width: 1200
 notice:
-    yellow: "Info"
-    red: "Warning"
-    blue: "Note"
-    green: "Tip"  
+    yellow: Info
+    red: Warning
+    blue: Note
+    green: Tip
