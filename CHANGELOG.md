@@ -49,4 +49,4 @@
 ##  05/16/2020
 
 1. [](#bugfix)
-    * minor bugfixes and style updates
+    * minor css updates
