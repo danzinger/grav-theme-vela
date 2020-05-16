@@ -2,7 +2,7 @@
 
 The **Vela** Theme is for [Grav CMS](http://github.com/getgrav/grav). It is inspired by the amazing [Learn2](https://github.com/getgrav/grav-theme-learn2) Theme, but keeps things more simple and provides a touch enabled slideout navigation menu using [Slideout.js](https://github.com/Mango/slideout). The menu itself uses [Metismenu](https://github.com/onokumus/metismenu). Hamburger animation is provided by [Hamburgers](https://jonsuh.com/hamburgers). The theme is mobile-first, but offers settings to provide a good experience on desktops too.
 
-![Vela](assets/readme-screenshot.png)
+![Vela](assets/readme-screenshot.jpg)
 
 ## Description
 
