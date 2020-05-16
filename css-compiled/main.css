@@ -921,7 +921,6 @@ legend {
 }
 
 .metismenu .mm-active > a > .fa.plus-times {
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -967,9 +966,7 @@ legend {
   border-width: 1px 0 0 1px;
   border-color: initial;
   right: 1em;
-  -webkit-transform: rotate(-45deg) translateY(-50%);
   transform: rotate(-45deg) translateY(-50%);
-  -webkit-transform-origin: top;
   transform-origin: top;
   top: 50%;
   transition: all .3s ease-out;
@@ -978,17 +975,14 @@ legend {
 [dir=rtl] .metismenu .has-arrow:after {
   right: auto;
   left: 1em;
-  -webkit-transform: rotate(135deg) translateY(-50%);
   transform: rotate(135deg) translateY(-50%);
 }
 
 .metismenu .has-arrow[aria-expanded=true]:after, .metismenu .mm-active > .has-arrow:after {
-  -webkit-transform: rotate(-135deg) translateY(-50%);
   transform: rotate(-135deg) translateY(-50%);
 }
 
 [dir=rtl] .metismenu .has-arrow[aria-expanded=true]:after, [dir=rtl] .metismenu .mm-active > .has-arrow:after {
-  -webkit-transform: rotate(225deg) translateY(-50%);
   transform: rotate(225deg) translateY(-50%);
 }
 
@@ -1041,49 +1035,48 @@ legend {
   position: relative;
   display: block;
   padding: 15px 15px;
-  color: #adb5bd;
+  color: #cad4df;
   outline-width: 0;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-out;
 }
 
 .sidebar-nav .metismenu ul > li {
-  padding-left: 1px;
-  border-left: 3px solid #455a64;
-  background: rgba(255, 255, 255, 0.05);
+  padding-left: 2px;
+  border-left: 4px solid #455a6456;
+  background: rgba(185, 185, 185, 0.05);
 }
 
 .sidebar-nav .metismenu ul ul {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(219, 219, 219, 0);
 }
 
 .sidebar-nav .metismenu a:hover, .sidebar-nav .metismenu a:focus, .sidebar-nav .metismenu a:active {
-  color: #f8f9fa;
+  color: #e2e2e2;
   text-decoration: none;
-  background: #455a64;
+  background: #455a6456;
 }
 
 .sidebar-nav .metismenu a[aria-expanded="true"] {
-  background-color: #455a64;
+  background-color: #455a6456;
 }
 
 .sidebar-nav .metismenu .active-page {
-  font-weight: 500;
-  color: #f8f9fa;
+  font-weight: 400;
+  color: #e2e2e2;
 }
 
 .sidebar-brand {
   display: flex;
-  color: #f8f9fa;
+  color: #e2e2e2;
   height: 65px;
   line-height: 20px;
   justify-content: center;
-  align-content: center;
   align-items: center;
   width: 100%;
 }
 
 .sidebar-brand:hover {
-  color: #adb5bd;
+  color: #c9c8c8;
 }
 
 .slideout-menu {
@@ -1193,9 +1186,7 @@ legend {
   background-color: #000;
   border-radius: 4px;
   position: absolute;
-  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
   transition-duration: 0.15s;
   transition-timing-function: ease;
 }
@@ -1217,35 +1208,27 @@ legend {
      * 3DX
      */
 .hamburger--3dx .hamburger-box {
-  -webkit-perspective: 80px;
   perspective: 80px;
 }
 
 .hamburger--3dx .hamburger-inner {
-  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dx .hamburger-inner::before, .hamburger--3dx .hamburger-inner::after {
-  transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dx.is-active .hamburger-inner {
   background-color: transparent;
-  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
 .hamburger--3dx.is-active .hamburger-inner::before {
-  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
   transform: translate3d(0, 10px, 0) rotate(45deg);
 }
 
 .hamburger--3dx.is-active .hamburger-inner::after {
-  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
   transform: translate3d(0, -10px, 0) rotate(-45deg);
 }
 
@@ -1253,35 +1236,27 @@ legend {
      * 3DX Reverse
      */
 .hamburger--3dx-r .hamburger-box {
-  -webkit-perspective: 80px;
   perspective: 80px;
 }
 
 .hamburger--3dx-r .hamburger-inner {
-  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dx-r .hamburger-inner::before, .hamburger--3dx-r .hamburger-inner::after {
-  transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dx-r.is-active .hamburger-inner {
   background-color: transparent;
-  -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
 
 .hamburger--3dx-r.is-active .hamburger-inner::before {
-  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
   transform: translate3d(0, 10px, 0) rotate(45deg);
 }
 
 .hamburger--3dx-r.is-active .hamburger-inner::after {
-  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
   transform: translate3d(0, -10px, 0) rotate(-45deg);
 }
 
@@ -1289,35 +1264,27 @@ legend {
      * 3DY
      */
 .hamburger--3dy .hamburger-box {
-  -webkit-perspective: 80px;
   perspective: 80px;
 }
 
 .hamburger--3dy .hamburger-inner {
-  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dy .hamburger-inner::before, .hamburger--3dy .hamburger-inner::after {
-  transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dy.is-active .hamburger-inner {
   background-color: transparent;
-  -webkit-transform: rotateX(-180deg);
   transform: rotateX(-180deg);
 }
 
 .hamburger--3dy.is-active .hamburger-inner::before {
-  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
   transform: translate3d(0, 10px, 0) rotate(45deg);
 }
 
 .hamburger--3dy.is-active .hamburger-inner::after {
-  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
   transform: translate3d(0, -10px, 0) rotate(-45deg);
 }
 
@@ -1325,35 +1292,27 @@ legend {
      * 3DY Reverse
      */
 .hamburger--3dy-r .hamburger-box {
-  -webkit-perspective: 80px;
   perspective: 80px;
 }
 
 .hamburger--3dy-r .hamburger-inner {
-  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dy-r .hamburger-inner::before, .hamburger--3dy-r .hamburger-inner::after {
-  transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dy-r.is-active .hamburger-inner {
   background-color: transparent;
-  -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
 
 .hamburger--3dy-r.is-active .hamburger-inner::before {
-  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
   transform: translate3d(0, 10px, 0) rotate(45deg);
 }
 
 .hamburger--3dy-r.is-active .hamburger-inner::after {
-  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
   transform: translate3d(0, -10px, 0) rotate(-45deg);
 }
 
@@ -1361,35 +1320,27 @@ legend {
      * 3DXY
      */
 .hamburger--3dxy .hamburger-box {
-  -webkit-perspective: 80px;
   perspective: 80px;
 }
 
 .hamburger--3dxy .hamburger-inner {
-  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dxy .hamburger-inner::before, .hamburger--3dxy .hamburger-inner::after {
-  transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dxy.is-active .hamburger-inner {
   background-color: transparent;
-  -webkit-transform: rotateX(180deg) rotateY(180deg);
   transform: rotateX(180deg) rotateY(180deg);
 }
 
 .hamburger--3dxy.is-active .hamburger-inner::before {
-  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
   transform: translate3d(0, 10px, 0) rotate(45deg);
 }
 
 .hamburger--3dxy.is-active .hamburger-inner::after {
-  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
   transform: translate3d(0, -10px, 0) rotate(-45deg);
 }
 
@@ -1397,35 +1348,27 @@ legend {
      * 3DXY Reverse
      */
 .hamburger--3dxy-r .hamburger-box {
-  -webkit-perspective: 80px;
   perspective: 80px;
 }
 
 .hamburger--3dxy-r .hamburger-inner {
-  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dxy-r .hamburger-inner::before, .hamburger--3dxy-r .hamburger-inner::after {
-  transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dxy-r.is-active .hamburger-inner {
   background-color: transparent;
-  -webkit-transform: rotateX(180deg) rotateY(180deg) rotateZ(-180deg);
   transform: rotateX(180deg) rotateY(180deg) rotateZ(-180deg);
 }
 
 .hamburger--3dxy-r.is-active .hamburger-inner::before {
-  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
   transform: translate3d(0, 10px, 0) rotate(45deg);
 }
 
 .hamburger--3dxy-r.is-active .hamburger-inner::after {
-  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
   transform: translate3d(0, -10px, 0) rotate(-45deg);
 }
 
@@ -1442,13 +1385,10 @@ legend {
 }
 
 .hamburger--spin .hamburger-inner::after {
-  transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .hamburger--spin.is-active .hamburger-inner {
-  -webkit-transform: rotate(225deg);
   transform: rotate(225deg);
   transition-delay: 0.12s;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1462,11 +1402,8 @@ legend {
 
 .hamburger--spin.is-active .hamburger-inner::after {
   bottom: 0;
-  -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 h1,
@@ -1475,13 +1412,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h1 {
   margin: 35px 0px 10px 0px;
   position: relative;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h1 {
@@ -1490,13 +1427,13 @@ h1 {
 
 @media screen and (min-width: 320px) {
   h1 {
-    font-size: calc(35px + 25 * ((100vw - 320px) / 880));
+    font-size: calc(35px + 5 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h1 {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 
@@ -1517,13 +1454,13 @@ h2 {
 
 @media screen and (min-width: 320px) {
   h2 {
-    font-size: calc(20px + 25 * ((100vw - 320px) / 880));
+    font-size: calc(20px + 12 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h2 {
-    font-size: 45px;
+    font-size: 32px;
   }
 }
 
@@ -1538,13 +1475,13 @@ h3 {
 
 @media screen and (min-width: 320px) {
   h3 {
-    font-size: calc(19px + 21 * ((100vw - 320px) / 880));
+    font-size: calc(19px + 9 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h3 {
-    font-size: 40px;
+    font-size: 28px;
   }
 }
 
@@ -1559,13 +1496,13 @@ h4 {
 
 @media screen and (min-width: 320px) {
   h4 {
-    font-size: calc(18px + 17 * ((100vw - 320px) / 880));
+    font-size: calc(18px + 6 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h4 {
-    font-size: 35px;
+    font-size: 24px;
   }
 }
 
@@ -1580,13 +1517,13 @@ h5 {
 
 @media screen and (min-width: 320px) {
   h5 {
-    font-size: calc(17px + 13 * ((100vw - 320px) / 880));
+    font-size: calc(17px + 3 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h5 {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 
@@ -1601,13 +1538,13 @@ h6 {
 
 @media screen and (min-width: 320px) {
   h6 {
-    font-size: calc(16px + 9 * ((100vw - 320px) / 880));
+    font-size: calc(16px + 0 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   h6 {
-    font-size: 25px;
+    font-size: 16px;
   }
 }
 
@@ -1687,21 +1624,40 @@ body {
 
 .header-hr {
   border: 0;
-  height: 0;
-  /* Firefox... */
-  box-shadow: 0 0 5px 1px #2579c7;
-  margin-bottom: 30px;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 .page-title {
   margin-bottom: 0px;
 }
 
+.page-title {
+  font-size: 45px;
+}
+
+@media screen and (min-width: 320px) {
+  .page-title {
+    font-size: calc(45px + 35 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-title {
+    font-size: 80px;
+  }
+}
+
+.slideout-panel {
+  height: 100%;
+  background-color: whitesmoke;
+}
+
 .content {
   margin: 0 auto;
   padding: 0 1em;
   max-width: 1170px;
-  margin-bottom: 50px;
   word-wrap: break-word;
 }
 

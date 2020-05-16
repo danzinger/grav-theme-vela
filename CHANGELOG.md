@@ -44,3 +44,9 @@
 1. [](#bugfix)
     * Fixed cross browser issues
     * minor bugfixes
+
+# v1.1.4
+##  05/16/2020
+
+1. [](#bugfix)
+    * minor bugfixes and style updates
