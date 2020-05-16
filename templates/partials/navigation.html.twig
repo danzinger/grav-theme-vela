@@ -1,10 +1,11 @@
 <div class="flex-container">
     <a href="{{ base_url == '' ? '/' : base_url }}" class="sidebar-brand">
-         {{ config.theme.title_in_menu }}
+         <img style="margin-right: 10px;" src="{{url('theme://assets')}}/{{config.theme.logo}}"  width="{{config.theme.logo_size}}px" alt="boat"> 
+         {{ config.theme.title_in_menu}} 
     </a> 
 </div>
 
-<nav class="sidebar-nav">
+<nav class="sidebar-nav"> 
 {% macro nav_loop(page, parents_routable) %}
     {% for p in page.children.visible %}
         {% set active_page_or_child = (p.active or p.activeChild) ? 'mm-active' : '' %}
