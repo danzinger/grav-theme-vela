@@ -2,6 +2,7 @@ enabled: true
 title_in_menu: '<div style=''font-size: 30px''>Vela<sub style=''font-size: 15px;padding-top:7px;''>v1.1.4</sub></div><span ></span>'
 logo: grav-brands.svg
 logo_size: 53
+size_dimension: 0
 hamburger_animation: hamburger--spin
 parents_routable: '0'
 desktop_mode: '1'

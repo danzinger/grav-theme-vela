@@ -28,19 +28,35 @@ form:
           type: text
           label: Logo filename (place logo in user/themes/vela/assets/)
           help: Place the image in user/themes/vela/assets/ and specify the filename here, eg. ''my-logo.svg''
-        logo_size:
-          type: number
-          label: Logo size in pixels
-          help:  Set the Logo size in pixels
+        columns:
+          type: columns
+          fields:
+            column1:
+              type: column
+              fields:
+                logo_size:
+                  type: number
+                  label: Logo size in pixels
+                  help:  Set the Logo size in pixels
+            column2:
+              type: column
+              fields:
+                size_dimension:
+                  label: Dimension to resize
+                  type: toggle
+                  default: 0
+                  options:
+                    0: "width"
+                    1: "height"
         hamburger_animation:
           type: text
-          label: Specify the hamburger animation. <a href="https://jonsuh.com/hamburgers/">Reference</a> 
+          label: Specify the hamburger animation. <a href="https://jonsuh.com/hamburgers/">Reference</a>
     sec2:
       type: section
       title: Markdown Notices Settings
       text:  "<strong>Note: </strong> These settings are only applicable, if built-in css of markdown notices plugin is not used. You can disable usage of built-in css in the settings of the markdown notices plugin. The Vela theme will then automatically use its own styles for the notices. These include a small text. You can specify here, which text appears above the respective notice."
       underline: true
-      fields:          
+      fields:
         notice.yellow:
             type: text
             label: Yellow markown notice text
