@@ -1,6 +1,12 @@
+{% set logo = config.theme.custom_logo %}
+{% if logo %}
+  {% set logo = (logo|first).name %}
+{% else %}
+  {% set logo = "grav-brands.svg" %}
+{% endif %}
 <div class="flex-container">
     <a href="{{ base_url == '' ? '/' : base_url }}" class="sidebar-brand">
-         <img style="margin-right: 10px;" src="{{url('theme://assets')}}/{{config.theme.logo}}"
+         <img style="margin-right: 10px;" src="{{url('theme://assets')}}/{{logo}}"
          {% if not config.theme.size_dimension %}
            width="{{config.theme.logo_size}}px"
          {% else %}
