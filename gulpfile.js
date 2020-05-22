@@ -47,7 +47,7 @@ gulp.task('sass', function() {
 
 gulp.task('serve', () => {
   browserSync.init({
-      proxy: "http://localhost/website/projects/grav-admin/"
+      proxy: "http://localhost/website/projects/grav-theme-vela"
   });
   
    gulp.watch('./scss/**/*.scss', gulp.series('sass'));//.on('change', reload);

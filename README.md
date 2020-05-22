@@ -1,6 +1,6 @@
 # Vela Theme
 
-The **Vela** Theme is for [Grav CMS](http://github.com/getgrav/grav). It is inspired by the amazing [Learn2](https://github.com/getgrav/grav-theme-learn2) Theme, but keeps things more simple and provides a touch enabled slideout navigation menu using [Slideout.js](https://github.com/Mango/slideout). The menu itself uses [Metismenu](https://github.com/onokumus/metismenu). Hamburger animation is provided by [Hamburgers](https://jonsuh.com/hamburgers). The theme is mobile-first, but offers settings to provide a good experience on desktops too.
+The **Vela** Theme is for [Grav CMS](http://github.com/getgrav/grav). This theme is focused on usability rather than on design and was made to present large amounts of structured content. Vela is mobile-first, but offers settings to provide a good experience on desktops too. 
 
 ![Vela](assets/readme-screenshot.jpg)
 
@@ -12,33 +12,36 @@ A simple app-like mobile first and content-focused Grav Theme.
 
 The theme was developed to provide learning materials and course information to students. It is focused on the content, so it is kept very simple. 
 
-* An applike touch enabled slideout navigation menu using [slideout.js](https://github.com/Mango/slideout)
-* A structured menu for many subpages optimized for mobile using [metismenu](https://github.com/onokumus/metismenu)
+* An applike touch enabled slideout navigation.
+* A structured menu for many subpages optimized for mobile using.
 * No distraction, only content
 
 ## Settings
 
-The theme provides several options. If you are using the admin panel, you can easily modify these settings under Themes > Vela. If you are not using admin, you probably know where to modify these settings directly.
+If you are using the admin panel (backend), you can easily modify these settings under Themes > Vela. If you are not using admin, you probably know where to modify these settings directly. The theme provides several options. 
 
 ##### Basic Settings
 
-* **Title in Menu.** To keep it very simple, you can provide a HTML-string with inline styles here. This turned out to be the easiest solution to have a nice styling for different names. If you do not worry about styling, just enter a short title. 
-* **Hamburger animation.** You may use any other animation style. See [here](https://jonsuh.com/hamburgers) for reference.
+* **Title in Menu** Here you can add a title/name to appear in the top of the menu. You can also provide a HTML-string with inline styles here. 
+* **Logo** Here you can upload a logo to appear in the top of the menu. You can also resize your logo as desired.
+* **Hamburger animation** You may use any other animation style. See [here](https://jonsuh.com/hamburgers) for reference.
 
 ##### Markdown Notices Settings
 
-* **Markdown notice Settings.** If you use the [Markdown-notices plugin](https://github.com/getgrav/grav-plugin-markdown-notices) **without** the build-in-css (disable built-in-css in plugin options), the Vela theme will automatically use its own styles for the notices. These include a small text. You can specify here, which text appears above the respective notice.
+* **Markdown notice Settings** If you use the [Markdown-notices plugin](https://github.com/getgrav/grav-plugin-markdown-notices) **without** the build-in-css (disable built-in-css in plugin options), the Vela theme will automatically use its own styles for the notices. These include a small text. You can specify here, which text appears above the respective notice.
 
 ##### Responsive settings
-* **Desktop Mode.** If enabled, the off-canvas-menu is always open if screen is wider than the `Desktop min width` value, which can be set below. 
-* **Desktop min width (pixels).** Applies only in desktop mode. If the screen width is wider than the given amount of pixels, the off-canvas menu is always open.
-* **Parent pages routable in menu.** If you have pages with subpages and you want these parent-pages to be accessible from the menu because you like to place content there, you can use this option. The page will only be opened, if it existis and if you do not set `routable: false` in the frontmatter of the page. Otherwise, the subpages are only expanded in the menu. **Please note: ** If you do not use Desktop Mode or - when in Desktop Mode - the screen-width is smaller then the amount set above, the menu closes each time you click a routable parent.
+* **Desktop Mode** If enabled, the off-canvas-menu is always open if screen is wider than the `Desktop min width` value, which can be set below. 
+* **Desktop min width (pixels)** Applies only in desktop mode. If the screen width is wider than the given amount of pixels, the off-canvas menu is always open.
+* **Parent pages routable in menu** If you have pages with subpages and you want these parent-pages to be accessible from the menu because you like to place content there, you can use this option. The page will only be opened, if it existis and if you do not set `routable: false` in the frontmatter of the page. Otherwise, the subpages are only expanded in the menu. **Please note: ** If you do not use Desktop Mode or - when in Desktop Mode - the screen-width is smaller then the amount set above, the menu closes each time you click a routable parent.
 
 ## Templates
 
+To present your content, I recommend using plugins and the theme should work fine with there. You find plugins for many content types like images, videos or even math on [the GRAV plugins page](https://getgrav.org/downloads/plugins). Vela tries not to make any assumtions on how you present your content.
+
 ### Table of Contents
 
-Beside a default template Vela comes with an additional template to easily generate a decimal structured table of contents.
+Beside a default template Vela comes with only one additional template to manually generate a decimal structured table of contents. There are plugins for this, but I often need to present a different table of content than just the structure of the website.
 
 Just write Markdown like this to generate a decimal structure.
 
@@ -74,8 +77,6 @@ Note: Actually you dont even need this template. To generate the TOC without the
 ...
 </div>
 ```
-
-For all content of my courses I use plugins like [MathJax](https://github.com/sommerregen/grav-plugin-mathjax) to write LaTeX, [YouTube](https://github.com/getgrav/grav-plugin-youtube) for adding Videos, ...
 
 # Installation
 
@@ -121,3 +122,8 @@ Manually updating Vela is pretty simple. Here is what you will need to do to get
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
 
 > Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
+
+# Credits
+
+Vela is inspired by the amazing [Learn2](https://github.com/getgrav/grav-theme-learn2) Theme, but keeps things more simple and provides a touch enabled slideout navigation menu using [Slideout.js](https://github.com/Mango/slideout). The menu itself uses [Metismenu](https://github.com/onokumus/metismenu). Hamburger animation is provided by [Hamburgers](https://jonsuh.com/hamburgers). 
+
