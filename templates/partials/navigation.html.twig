@@ -8,8 +8,7 @@
     <a href="{{ base_url == '' ? '/' : base_url }}" class="sidebar-brand">
          <img
          src="{{url('theme://assets')}}/{{logo}}"
-         style="margin-right: 10px;
-         object-fit: contain;
+         style="object-fit: contain;
          {% if not config.theme.size_dimension %}
            width:{{config.theme.logo_size}}px;
          {% else %}
