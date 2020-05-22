@@ -18,7 +18,7 @@ The theme was developed to provide learning materials and course information to 
 
 ## Settings
 
-If you are using the admin panel (backend), you can easily modify these settings under Themes > Vela. If you are not using admin, you probably know where to modify these settings directly. The theme provides several options. 
+If you are using the admin panel as a backend (recommended), you can easily modify these settings under Themes > Vela. If you are not using admin, you probably know where to modify these settings directly. The theme provides several options.
 
 ##### Basic Settings
 
@@ -125,5 +125,5 @@ Manually updating Vela is pretty simple. Here is what you will need to do to get
 
 # Credits
 
-Vela is inspired by the amazing [Learn2](https://github.com/getgrav/grav-theme-learn2) Theme, but keeps things more simple and provides a touch enabled slideout navigation menu using [Slideout.js](https://github.com/Mango/slideout). The menu itself uses [Metismenu](https://github.com/onokumus/metismenu). Hamburger animation is provided by [Hamburgers](https://jonsuh.com/hamburgers). 
+Vela is inspired by the amazing [Learn2](https://github.com/getgrav/grav-theme-learn2) theme, but keeps things more simple and provides a touch enabled slideout navigation menu using [Slideout.js](https://github.com/Mango/slideout). The menu itself uses [Metismenu](https://github.com/onokumus/metismenu). Hamburger animation is provided by [Hamburgers](https://jonsuh.com/hamburgers). 
 
