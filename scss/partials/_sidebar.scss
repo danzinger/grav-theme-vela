@@ -1,9 +1,5 @@
-$menu-bg-color:#1f1f1f;
-$menu-sec-color: #455a6456;
-$menu-font-color: #cad4df;
-$hover-active-font-color: #e2e2e2;
+
 .sidebar-nav {
-    background: $menu-bg-color;
     a,
     li,
     ul {
@@ -64,7 +60,7 @@ $hover-active-font-color: #e2e2e2;
     display: flex;
     color: $hover-active-font-color;
     height: auto;
-    padding: 10px 0;
+    padding: 15px 0;
     line-height: 20px;
     justify-content: center;
     align-items: center;

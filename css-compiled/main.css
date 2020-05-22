@@ -987,10 +987,6 @@ legend {
 }
 
 /*# sourceMappingURL=metisMenu.min.css.map */
-.sidebar-nav {
-  background: #1f1f1f;
-}
-
 .sidebar-nav a,
 .sidebar-nav li,
 .sidebar-nav ul {
@@ -1069,7 +1065,7 @@ legend {
   display: flex;
   color: #e2e2e2;
   height: auto;
-  padding: 10px 0;
+  padding: 15px 0;
   line-height: 20px;
   justify-content: center;
   align-items: center;
@@ -1078,6 +1074,10 @@ legend {
 
 .sidebar-brand:hover {
   color: #c9c8c8;
+}
+
+.main-nav {
+  display: none;
 }
 
 .slideout-menu {
@@ -1092,51 +1092,28 @@ legend {
   display: none;
 }
 
-.slideout-menu-left {
-  left: 0;
+.slideout-open .slideout-menu {
+  display: block;
 }
 
-.slideout-menu-right {
-  right: 0;
+.slideout-menu-left {
+  left: 0;
 }
 
 .slideout-panel {
   position: relative;
   z-index: 1;
-  background-color: #fff;
+  height: 100%;
   /* A background-color is required */
+  background-color: whitesmoke;
   min-height: 100vh;
+  color: #1f1f1f;
 }
 
 .slideout-open,
 .slideout-open body,
 .slideout-open .slideout-panel {
   overflow: hidden;
-}
-
-.slideout-open .slideout-menu {
-  display: block;
-}
-
-#menu {
-  background-color: #1f1f1f;
-}
-
-/* Overlay for closing the menu on panel click when menu is open */
-.panel:before {
-  content: '';
-  display: block;
-  background-color: rgba(0, 0, 0, 0);
-  transition: background-color 0.5s ease-in-out;
-}
-
-.panel-open:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99;
 }
 
 /*!
@@ -1441,7 +1418,7 @@ h1 {
 .default-header {
   line-height: 0.8;
   padding: 0px 25px 10px 0px;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #1f1f1f;
 }
 
 h2 {
@@ -1612,11 +1589,32 @@ a:hover {
 
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   word-break: break-word;
+  background-color: #1f1f1f;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6f6e6e;
 }
 
 .flex-container {
@@ -1632,6 +1630,7 @@ body {
 
 .page-title {
   margin-bottom: 0px;
+  margin-top: 5px;
 }
 
 .page-title {
@@ -1648,11 +1647,6 @@ body {
   .page-title {
     font-size: 80px;
   }
-}
-
-.slideout-panel {
-  height: 100%;
-  background-color: whitesmoke;
 }
 
 .content {
@@ -1696,24 +1690,4 @@ body {
 .toc-page li:before {
   content: counters(item, ".") " ";
   counter-increment: item;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #6f6e6e;
 }

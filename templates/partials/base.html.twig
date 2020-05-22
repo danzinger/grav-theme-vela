@@ -11,8 +11,6 @@
         {% include 'partials/metadata.html.twig' %}
 
         <link rel="canonical" href="{{ page.url(true, true) }}" />
-        <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
-        <link rel="icon" type="image/png" href="{{ url('user://images/favicon.png') ?: url('theme://images/favicon.png') }}" />
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
         {% block stylesheets %}

@@ -23,7 +23,7 @@ If you are using the admin panel (backend), you can easily modify these settings
 ##### Basic Settings
 
 * **Title in Menu** Here you can add a title/name to appear in the top of the menu. You can also provide a HTML-string with inline styles here. 
-* **Logo** Here you can upload a logo to appear in the top of the menu. You can also resize your logo as desired.
+* **Logo** You can use a logo or not. In case you like to use one, you can upload an image here to appear in the top of the menu. You can also resize your logo as desired.
 * **Hamburger animation** You may use any other animation style. See [here](https://jonsuh.com/hamburgers) for reference.
 
 ##### Markdown Notices Settings
@@ -37,7 +37,7 @@ If you are using the admin panel (backend), you can easily modify these settings
 
 ## Templates
 
-To present your content, I recommend using plugins and the theme should work fine with there. You find plugins for many content types like images, videos or even math on [the GRAV plugins page](https://getgrav.org/downloads/plugins). Vela tries not to make any assumtions on how you present your content.
+To present your content, I recommend using plugins. The theme should work fine with most of them. You find plugins for many content types like images, videos or even math on [the GRAV plugins page](https://getgrav.org/downloads/plugins). Vela tries not to make any assumtions on how you present your content.
 
 ### Table of Contents
 

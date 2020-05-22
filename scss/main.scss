@@ -1,12 +1,27 @@
-$font-color: black;
+$font-color: #1f1f1f;
 $link-color: #2579c7;
 $link-hover-color: darken($link-color, 15%);
 
-@import "vendor/pure"; 
+//MENU
+$menu-bg-color: #1f1f1f;
+$menu-sec-color: #455a6456;
+$menu-font-color: #cad4df;
+$hover-active-font-color: #e2e2e2;
+
+//Fluid Type
+//Between a viewport width from $min_width to $max_width the font-size is dynamically adjusted
+$min_width: 320px;
+$max_width: 1200px;
+
+//Default template backgroundcolor
+$default-bg-color: rgb(245, 245, 245);
+
+@import "vendor/pure";
 @import "vendor/metismenu";
-@import 'partials/mixins';
+@import "partials/mixins";
 @import "partials/sidebar";
 @import "partials/slideout";
 @import "partials/hamburgers";
-@import 'partials/typography';
-@import "partials/default";  
+@import "partials/typography";
+@import "partials/global";
+@import "partials/default";

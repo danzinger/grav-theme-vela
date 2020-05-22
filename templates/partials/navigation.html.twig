@@ -2,26 +2,28 @@
 {% if logo %}
   {% set logo = (logo|first).name %}
 {% else %}
-  {% set logo = "grav-brands.svg" %}
+  {% set logo = "default-logo.svg" %}
 {% endif %}
 <div class="flex-container">
     <a href="{{ base_url == '' ? '/' : base_url }}" class="sidebar-brand">
-         <img
-         src="{{url('theme://assets')}}/{{logo}}"
-         style="object-fit: contain;
-         {% if not config.theme.size_dimension %}
-           width:{{config.theme.logo_size}}px;
-         {% else %}
-           height:{{config.theme.logo_size}}px;
-         {% endif %}
-         {% if config.theme.title_in_menu == '' %}
-          max-width: 100%;
-        {% else %}
-          max-width: 50%;
-        {% endif %}
-         "
-           alt="{{site.name}}">
-         {{ config.theme.title_in_menu}}
+      {% if config.theme.use_logo %}
+        <img
+          src="{{url('theme://images')}}/{{logo}}"
+          style="object-fit: contain;
+            {% if not config.theme.size_dimension %}
+              width:{{config.theme.logo_size}}px;
+            {% else %}
+              height:{{config.theme.logo_size}}px;
+            {% endif %}
+            {% if config.theme.title_in_menu == '' %}
+              max-width: 100%;
+            {% else %}
+              max-width: 50%;
+            {% endif %}
+            "
+          alt="{{site.name}}">
+      {% endif %}          
+      {{ config.theme.title_in_menu }}
     </a>
 </div>
 

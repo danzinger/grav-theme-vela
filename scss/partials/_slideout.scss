@@ -1,3 +1,8 @@
+// prevent flashing
+.main-nav {
+    display: none;
+}
+
 .slideout-menu {
     position: fixed;
     top: 0;
@@ -10,52 +15,26 @@
     display: none;
 }
 
-.slideout-menu-left {
-    left: 0;
+.slideout-open .slideout-menu {
+    display: block;
 }
 
-.slideout-menu-right {
-    right: 0;
+.slideout-menu-left {
+    left: 0;
 }
 
 .slideout-panel {
     position: relative;
     z-index: 1;
-    //will-change: transform;
-    background-color: #fff;
+    height: 100%;
     /* A background-color is required */
+    background-color: $default-bg-color;
     min-height: 100vh;
+    color: $font-color;
 }
 
 .slideout-open,
 .slideout-open body,
 .slideout-open .slideout-panel {
     overflow: hidden;
-}
-
-.slideout-open .slideout-menu {
-    display: block;
-}
-
-#menu {
-    background-color: $menu-bg-color;
-}
-
-
-/* Overlay for closing the menu on panel click when menu is open */
-
-.panel:before {
-    content: '';
-    display: block;
-    background-color: rgba(0, 0, 0, 0);
-    transition: background-color 0.5s ease-in-out;
-}
-
-.panel-open:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: 99;
 }

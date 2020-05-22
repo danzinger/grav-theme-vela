@@ -1,5 +1,5 @@
 name: Vela
-version: 1.1.4
+version: 1.2.0
 description: A simple app-like mobile first and content-focused Grav Theme
 icon: rebel
 author:
@@ -24,25 +24,39 @@ form:
           type: text
           label: Title in menu
           help:  If you do not worry about styling, just enter a short title. But you can also provide a HTML string with inline styles here to easily style the title in the menu.
+        use_logo:
+          label: Use logo
+          help: Specify if you like to have a logo at the top of the menu
+          type: toggle
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED     
         custom_logo:
           type: file
-          label: Upload your Logo
+          label: Upload your logo
           help: It will be displayed in the sidebar
-          description: Will be used instead of default logo `theme://assets/grav-brands.svg`
-          destination: 'theme@:/assets'
+          description: Will be used instead of default logo `theme://images/logo.svg`
+          destination: 'theme@:/images'
           accept:
-            - image/*
+            - image/*           
         columns:
           type: columns
           fields:
             column1:
               type: column
               fields:
+                spacer:
+                  type: spacer
+                  text: ''
+            column2:
+              type: column
+              fields:
                 logo_size:
                   type: number
                   label: Logo size in pixels
                   help:  Set the Logo size in pixels
-            column2:
+            column3:
               type: column
               fields:
                 size_dimension:
@@ -58,7 +72,7 @@ form:
     sec2:
       type: section
       title: Markdown Notices Settings
-      text:  "<strong>Note: </strong> These settings are only applicable, if built-in css of markdown notices plugin is not used. You can disable usage of built-in css in the settings of the markdown notices plugin. The Vela theme will then automatically use its own styles for the notices. These include a small text. You can specify here, which text appears above the respective notice."
+      text:  "<strong>Note: </strong> These settings are only applicable, if markdown notices plugin is used and if built-in css of markdown notices plugin is disabled. You can disable the usage of the built-in-css in the settings of the markdown notices plugin. The Vela theme will then automatically use its own styles for the notices. These include a small text. You can specify here, which text appears above the respective notice."
       underline: true
       fields:
         notice.yellow:

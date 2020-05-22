@@ -50,7 +50,7 @@ gulp.task('serve', () => {
       proxy: "http://localhost/website/projects/grav-theme-vela"
   });
   
-   gulp.watch('./scss/**/*.scss', gulp.series('sass'));//.on('change', reload);
+   gulp.watch('./scss/**/*.scss', gulp.series('sass')).on('change', reload);
    gulp.watch('./blueprints/*.yaml').on('change', reload);
    gulp.watch('./js/**/*.js').on('change', reload);
    gulp.watch('./templates/**/*.twig').on('change', reload);  

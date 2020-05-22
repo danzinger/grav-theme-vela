@@ -1,7 +1,3 @@
-$min_width: 320px;
-$max_width: 1200px;
-$min_font: 16px;
-$max_font: 50px;
 h1,
 h2,
 h3,
@@ -57,7 +53,7 @@ h6 {
 p,
 li,
 ul,
-code { 
+code {
     @include fluid-type($min_width, $max_width, 16px, 25px);
 }
 
@@ -79,8 +75,4 @@ a {
     &:hover {
         color: $link-hover-color;
     }
-}
-
-code {
-//    white-space: pre-line;
 }
