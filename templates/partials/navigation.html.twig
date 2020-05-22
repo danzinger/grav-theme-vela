@@ -1,11 +1,32 @@
+{% set logo = config.theme.custom_logo %}
+{% if logo %}
+  {% set logo = (logo|first).name %}
+{% else %}
+  {% set logo = "grav-brands.svg" %}
+{% endif %}
 <div class="flex-container">
     <a href="{{ base_url == '' ? '/' : base_url }}" class="sidebar-brand">
-         <img style="margin-right: 10px;" src="{{url('theme://assets')}}/{{config.theme.logo}}"  width="{{config.theme.logo_size}}px" alt="boat"> 
-         {{ config.theme.title_in_menu}} 
-    </a> 
+         <img
+         src="{{url('theme://assets')}}/{{logo}}"
+         style="margin-right: 10px;
+         object-fit: contain;
+         {% if not config.theme.size_dimension %}
+           width:{{config.theme.logo_size}}px;
+         {% else %}
+           height:{{config.theme.logo_size}}px;
+         {% endif %}
+         {% if config.theme.title_in_menu == '' %}
+          max-width: 100%;
+        {% else %}
+          max-width: 50%;
+        {% endif %}
+         "
+           alt="{{site.name}}">
+         {{ config.theme.title_in_menu}}
+    </a>
 </div>
 
-<nav class="sidebar-nav"> 
+<nav class="sidebar-nav">
 {% macro nav_loop(page, parents_routable) %}
     {% for p in page.children.visible %}
         {% set active_page_or_child = (p.active or p.activeChild) ? 'mm-active' : '' %}
@@ -18,13 +39,13 @@
                     {{ p.menu }}
                 </a>
                 <ul class="{{(p.active or p.activeChild) ? 'mm-show' :  ''}}">
-                    {{ _self.nav_loop(p, parents_routable) }} 
+                    {{ _self.nav_loop(p, parents_routable) }}
                 </ul>
             </li>
-        {% else %} 
+        {% else %}
             <li>
                 <a href="{{ p.url }}" class="{{ active_page_or_child }} {{ active_page }} " aria-expanded="false">
-                    {{ p.menu }} 
+                    {{ p.menu }}
                 </a>
             </li>
         {% endif %}

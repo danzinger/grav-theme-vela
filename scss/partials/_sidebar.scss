@@ -1,7 +1,7 @@
 $menu-bg-color:#1f1f1f;
 $menu-sec-color: #455a6456;
 $menu-font-color: #cad4df;
-$hover-active-font-color: #e2e2e2; 
+$hover-active-font-color: #e2e2e2;
 .sidebar-nav {
     background: $menu-bg-color;
     a,
@@ -63,12 +63,13 @@ $hover-active-font-color: #e2e2e2;
 .sidebar-brand {
     display: flex;
     color: $hover-active-font-color;
-    height: 65px;
+    height: auto;
+    padding: 10px 0;
     line-height: 20px;
     justify-content: center;
     align-items: center;
     width: 100%;
     &:hover {
-        color: darken($hover-active-font-color, 10%); 
+        color: darken($hover-active-font-color, 10%);
     }
 }
