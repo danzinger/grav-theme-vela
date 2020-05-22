@@ -9,6 +9,12 @@ body {
     background-color: $menu-bg-color;
 }
 
+
+//prevent the colored highlighting of links on certain elements (for menu items) on chrome
+.webkitNoSelect {
+    -webkit-tap-highlight-color: transparent; 
+} 
+
 // Webkit scrollbar
 /* width */
 ::-webkit-scrollbar {

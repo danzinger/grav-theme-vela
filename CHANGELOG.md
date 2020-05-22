@@ -1,3 +1,10 @@
+# v1.2.1
+##  05/23/2020
+
+1. [](#bugfix)
+    * prevent tap-color on webkit browsers
+    * slideout panel did not reach to the bottom if content margin was present
+
 # v1.2.0
 ##  05/23/2020
 
