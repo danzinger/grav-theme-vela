@@ -1,3 +1,9 @@
+# v1.2.3
+##  04/04/2021
+
+1. [](#bugfix)
+    * Fixed twig autoescape issues (#12)
+
 # v1.2.2
 ##  05/30/2020
 

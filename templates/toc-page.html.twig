@@ -8,7 +8,7 @@
     <h1 class="page-title">{{page.title}}</h1>
     <hr class="header-hr">
     <div class="toc-page">
-        {{ page.content }}
+        {{ page.content|raw }}
     </div>
 </div>
 {% endblock %}

@@ -4,7 +4,7 @@
   "homepage": "https://matthiasdanzinger.eu",
   "author": "Matthias Danzinger <matthias.danzinger@gmail.com>",
   "description": "Package for GRAV Theme development",
-  "license": "MIT",  
+  "license": "MIT",
   "browserslist": [
     "last 1 version",
     "> 1%",
