@@ -1,6 +1,8 @@
 # v1.2.4
-##  26/02/2022
+##  02/23/2025
 
+1. [](#new)
+    * Added modular template and text module
 1. [](#update)
     * Updated dependencies
 
