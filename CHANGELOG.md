@@ -1,8 +1,15 @@
-# v1.2.4
+# v1.2.5
 ##  02/23/2025
 
-1. [](#new)
-    * Added modular template and text module
+1. [](#update)
+    * Added modular page and text module
+1. [](#bugfix)
+    * Added req. fields in blueprints.yaml
+    * Changelog parsing error
+
+# v1.2.4
+##  02/26/2022
+
 1. [](#update)
     * Updated dependencies
 
